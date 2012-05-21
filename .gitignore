@@ -1,3 +1,13 @@
+# Until we do the CNAME dance...
+CNAME
+
+# vim temporaries
 *~
+.swp
+
+# Never commit the Jekyll output.
 _site/
+
+# Let's not push many megabytes at this time.
+# PDFs should live outside the Git tree.
 pdf/
