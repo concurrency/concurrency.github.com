@@ -1,0 +1,52 @@
+<div id="sub">
+    <div class="container_12">
+        <div class="container_8" align="center">
+        Subscribe to our blog via <a href="/feed/rss.xml">RSS</a> or <a href="/feed/atom.xml">Atom</a>.
+        <hr>
+        </div>
+
+        <div class="grid_4">
+            <h4>Metadata</h4>
+            <ul class="regular">
+                <li>Posted: {{ page.date | date:'%B %d, %Y' }}</li>
+                <li>Author: {{ page.author }}</li>
+            </ul>
+        </div>
+        
+        <div class="grid_4">
+            <h4>Latest Weblog Posts</h4>
+            <ul>
+            {% for post in site.posts limit: 5 %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a><br>
+                    {{ post.date | date:'%B %d, %Y' }}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <div class="grid_4">
+            <h4>Hardware</h4>
+            <ul>
+                <li><a href="/hardware/">Overview</a><br/>
+                A brief overview of hardware we've developed.
+                </li>
+                <li><a href="/hardware/ccc">The c.cc board</a><br/>
+                Our own Freeduino variant: the best part is that it runs on one AA battery!
+                </li>
+                <li><a href="/hardware/cardboarduino">The Cardboarduino</a><br/>
+                An Arduino-ish computer you can print out and build on a piece of posterboard.
+                </li>  
+                <li><a href="/freeduino/">The Freeduino</a><br>See our short instructional videos for assembling your own Freeduino.</li>
+            </ul>
+        </div>      
+
+        <div id="footer" class="grid_12">
+        <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a> &nbsp; <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png" /></a></p>
+        </div>
+        
+    </div>
+    <br clear="both" />
+</div>
+
+{% include google_analytics.liquid %}

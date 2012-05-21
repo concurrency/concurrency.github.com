@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Concurrency: Downloads</title>
+{% include head.liquid %}
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+
+function getLink (data, platform, kind) {
+    if (platform in data) {
+        if (kind in data[platform]) {
+            release = data[platform][kind];
+            href = data['url'] + release['url'];
+            title = platform + ' ' + release['version'] + ' (' + kind + ')';
+            return '<a href="' + href + '">' + title + '</a>';
+        }
+    }
+    return 'No link for ' + kind + ' release on ' + platform + ' in download feed.';
+}
+
+$(document).ready(function() {
+    $.getJSON('releases.json', 
+        function(data) {
+            $('#macosx').append('<li>' + getLink(data, 'Mac OS X', 'dev') + '</li>');
+            $('#windows').append('<li>' + getLink(data, 'Windows', 'dev') + '</li>');
+    });
+});
+
+</script>
+
+</head>
+<body>
+<div id="top" style="background-image: url(/images/20100130-cc-logo2.png);background-repeat: no-repeat;background-position: right top;">
+    <!-- Heading -->
+    <div class="container_12">
+        <div class="grid_6 pagehead">
+        <h1>concurrency.cc</h1>
+        {% include tagline.liquid %}
+        </div>
+        
+        <div id="head" class="grid_6">
+            {% include navbar.liquid %}
+        </div>
+
+        <div class="grid_12">
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="grid_4">
+            <h2>Mac OS X</h2>
+            <ul id="macosx">
+            </ul>
+
+            <h2>Windows</h2>
+            <ul id="windows">
+            </ul>
+
+            <h2>Ubuntu Linux</h2>
+            <ul>
+                <li>
+                <a href="/blog/2010/07/17">Get the packages (testing)</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="grid_8">
+            <h2>Do two things at (almost) the same time!</h2>
+            <p align="center">
+            <!-- <img src="/images/20100718-editor-snapshot-60.png" /> -->
+            <object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/UGxn-zpw-U8&amp;hl=en_US&amp;fs=1?color1=0x402061&amp;color2=0x9461ca"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/UGxn-zpw-U8&amp;hl=en_US&amp;fs=1?color1=0x402061&amp;color2=0x9461ca" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object><br/>
+            <em>A <a href="http://www.youtube.com/view_play_list?p=6B8BA569821745F9">video playlist</a> of all our OSCON videos is available.</em>
+        </p>
+        </div>
+            
+        <div class="grid_12">
+            <hr>
+            <h3>Use the source, Luke...</h3>
+            <p>Our tools are all <strong>free</strong> and <strong>open source</strong>, licensed under a combination of the GPL and LGPL. (Our documentation, where appropriate, is Creative Commons licensed.) You can build the Transterpreter from source on Mac OS X and Linux. See <a href="http://projects.cs.kent.ac.uk/projects/kroc/trac/wiki/Installation">the build instructions</a> in our project wiki to get things going yourself. Not recommended for the casual user.</p>
+        </div>
+    </div>
+    <br clear="both">
+</div>
+
+{% include bottom.liquid %}
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Disable automatic regeneration
+# auto: false
+
+# Enable syntax highlighting
+pygments: true
+

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Concurrency: {{ page.title }}</title>
+{% include head.liquid %}
+</head>
+<body>
+<div id="top"  style="background-image: url(/images/20100130-cc-logo2.png);background-repeat: no-repeat;background-position: right top;">
+    <!-- Heading -->
+    <div class="container_12">
+        <div class="grid_6 pagehead">
+            <h2>concurrency.cc</h2>
+            {% include tagline.liquid %}
+        </div>
+        
+        <div id="head" class="grid_6">
+            {% include navbar.liquid %}
+        </div>
+        
+        <div class="grid_12">
+            <hr>
+        </div>
+        
+        <div class="grid_8 body">
+            <h1>{{ page.title }}</h1>
+
+            {{ content }}
+        </div>
+        
+        <div class="grid_4" align="center">
+            <img src="{{ page.sidebar }}" width="300"/><br/>
+            <div style="font-size:12px;"><em>{{ page.caption }} </em></div>
+        </div>
+        <br clear="both">
+    </div>
+</div>
+{% include bottom.liquid %}
+</body>
+</html>

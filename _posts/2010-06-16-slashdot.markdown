@@ -1,0 +1,13 @@
+---
+layout: post
+author: Matt Jadud
+title: Slashdot!
+---
+
+We got <a href="http://developers.slashdot.org/story/10/06/16/1635208/Parallel-Programming-For-the-Arduino"> picked up by Slashdot today</a>. Wootness. 
+
+We're currently in a fast-and-furious <a href="http://www.oscon.com/oscon2010/public/schedule/detail/13829/?cmp=il-ans-conf-oscon10-jadud">hack mode leading up to OSCON</a>. If you're interested in trying out our tools, you can <a href="http://concurrency.cc/book">grab our book</a> and download a <a href="http://www.concurrency.cc/download">Mac version of our development environment</a> (friendly-friendly), <a href="http://projects.cs.kent.ac.uk/projects/kroc/trac/wiki/Installation">build from source under Linux</a>, or (if you want to live dangerously), <a href="http://www.concurrency.cc/docs/mailinglists">join our users list</a>, introduce yourself, and ask nicely if you can try (the currently very ghetto) Debian binary package.
+
+If you keep your eyes on this blog or our <a href="http://twitter.com/concurrencycc">Twitter stream</a>, you'll hear when our Windows installer is ready, and when packaging is nice and clean for both Ubuntu/Debian and Fedora.
+
+We're always happy to support new people exploring new languages; please feel free to join our mailing lists and ask questions. We're here to help!

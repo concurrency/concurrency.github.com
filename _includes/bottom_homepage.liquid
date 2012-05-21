@@ -1,0 +1,42 @@
+<div id="sub">
+    <div class="container_12">
+        <div class="grid_4">
+            <h4>Need a Hand?</h4>
+            <p>
+                If you've got a question, post it to the appropriate <a href="/docs/mailinglists.html">mailing list</a> and we'll help out and point you in the right direction.
+            </p>
+ 
+        </div>
+        <div class="grid_4">
+           <h4>Latest Blog Updates</h4>
+            <ul>
+                <li style="list-style: none">
+                {% for post in site.posts limit: 5 %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a><br>
+                    {{ post.date | date:'%B %d, %Y' }}
+                </li>
+                {% endfor %}
+                </li>
+            </ul>
+        </div>
+        <div class="grid_4">
+            <h4>Team</h4>
+
+            <ul>
+                <li><a href="http://christian.lyderjacobsen.com/">Christian Jacobsen</a></li>
+                <li><a href="http://sububi.org/">Matt Jadud</a></li>
+                <li><a href"http://twitter.com/omerk">Omer Kilic</a></li>
+                <li><a href="http://offog.org/">Adam Sampson</a></li>
+                <li><a href="http://jonsimpson.co.uk/">Jon Simpson</a></li>
+            </ul>
+        </div>
+<!-- Footer -->
+        <div id="footer" class="grid_12">
+            <p>
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a> &nbsp; <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/us/80x15.png"></a>            </p>
+        </div>
+    </div><br clear="both">
+</div>
+
+{% include google_analytics.liquid %}
