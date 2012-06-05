@@ -6,29 +6,43 @@
 {% include head.liquid %}
 <script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
+function filterByPlatform (downloads, platform, n) {
+	platformDownloads = [];
+	if (platform in downloads) {
+		platformDownloads = downloads[platform];
+		var offset = platformDownloads.length - n;
+		return platformDownloads.slice(offset).reverse();
+	}
+}
 
-function getLink (data, platform, kind) {
-    if (platform in data) {
-        if (kind in data[platform]) {
-            release = data[platform][kind];
-            href = data['url'] + release['url'];
-            title = platform + ' ' + release['version'] + ' (' + kind + ')';
-            return '<a href="' + href + '">' + title + '</a>';
-        }
-    }
-    return 'No link for ' + kind + ' release on ' + platform + ' in download feed.';
+function parseDownloads (data) {
+	var mac = filterByPlatform(data, 'dev/mac', 1);
+	var out = "";
+	for (release in mac) {
+		r = mac[release];
+		out += '<li><a href="' + r["url"] + '">Mac OS X ' + r["version"] + '</a></li>';
+	}
+	$('#macosx').append(out);
+
+	var win = filterByPlatform(data, 'dev/win/zip', 1);
+	out = "";
+	for (release in win) {
+		r = win[release];
+		out += '<li><a href="' + r["url"] + '">Windows ' + r["version"] + '</a></li>';
+	}
+	$('#windows').append(out);
 }
 
 $(document).ready(function() {
-    $.getJSON('releases.json', 
-        function(data) {
-            $('#macosx').append('<li>' + getLink(data, 'Mac OS X', 'dev') + '</li>');
-            $('#windows').append('<li>' + getLink(data, 'Windows', 'dev') + '</li>');
-    });
+	$.ajax({
+		url: 'http://download.transterpreter.org/latest/downloads.json',
+		dataType: 'jsonp',
+		success:function(json){
+			parseDownloads(json)
+		}
+	});
 });
-
 </script>
-
 </head>
 <body>
 <div id="top" style="background-image: url(/images/20100130-cc-logo2.png);background-repeat: no-repeat;background-position: right top;">
