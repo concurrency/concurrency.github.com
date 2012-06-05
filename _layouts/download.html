@@ -22,7 +22,7 @@ function parseDownloads (data) {
 		r = mac[release];
 		out += '<li><a href="' + r["url"] + '">Mac OS X ' + r["version"] + '</a></li>';
 	}
-	$('#macosx').append(out);
+	$('#macosx').html(out);
 
 	var win = filterByPlatform(data, 'dev/win/zip', 1);
 	out = "";
@@ -30,7 +30,7 @@ function parseDownloads (data) {
 		r = win[release];
 		out += '<li><a href="' + r["url"] + '">Windows ' + r["version"] + '</a></li>';
 	}
-	$('#windows').append(out);
+	$('#windows').html(out);
 }
 
 $(document).ready(function() {
