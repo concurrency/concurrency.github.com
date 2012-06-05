@@ -34,6 +34,7 @@ function parseDownloads (data) {
 }
 
 $(document).ready(function() {
+	$('#nojs').css('display', 'none');
 	$.ajax({
 		url: 'http://download.transterpreter.org/latest/downloads.json',
 		dataType: 'jsonp',
@@ -58,6 +59,7 @@ $(document).ready(function() {
         </div>
 
         <div class="grid_12">
+			<p id="nojs" style="background-color: #ffc; text-align: center; font-size: 90%; padding: 0.5em;">This page uses JavaScript to retrieve the latest downloads. JavaScript is disabled in your browser, please enable it to continue.</p>
         </div>
 
         <div class="clear"></div>
@@ -65,10 +67,12 @@ $(document).ready(function() {
         <div class="grid_4">
             <h2>Mac OS X</h2>
             <ul id="macosx">
+				<li class="meta" style="font-style: italic; background-color: transparent;">Loading available downloads&hellip;</li>
             </ul>
 
             <h2>Windows</h2>
             <ul id="windows">
+				<li class="meta" style="font-style: italic; background-color: transparent;">Loading available downloads&hellip;</li>
             </ul>
 
             <h2>Ubuntu Linux</h2>
