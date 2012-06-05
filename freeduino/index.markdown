@@ -12,7 +12,7 @@ These instructions are most relevant to Freeduino kits purchased from [NKC Elect
  1. Check that your [kit has all of its pieces](parts-check.html).
  1. Set up your [workspace](workspace-preparation.html).
 
-You might note that the  [parts check](parts-check) has links to Wikipedia articles about each of the components. If you're fastidious, you'll read through those articles as part of your preparation, and make notes about the components in your lab notebook. Sketches of the components as well as what their common diagrammatic symbols look like would be good as well. This is one way to build knowledge and understanding about something new.
+You might note that the  [parts check](parts-check.html) has links to Wikipedia articles about each of the components. If you're fastidious, you'll read through those articles as part of your preparation, and make notes about the components in your lab notebook. Sketches of the components as well as what their common diagrammatic symbols look like would be good as well. This is one way to build knowledge and understanding about something new.
 
 ### Doing the Build
 Don't just dive in like a monkey that lives diving into things. 

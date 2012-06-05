@@ -30,6 +30,6 @@ The Cardboarduino design is made available under a <a href="http://creativecommo
 If you are interested in contributing to the design, the original OminGraffle file can be made available&mdash;drop **matt at concurrency dot cc** a note with your design suggestions if you're keen. 
 
 <ul>
-	<li>Version 20100423 of the Cardboarduino (<a href="/pdf/cardboarduino-20100423.pdf">PDF</a>, <a href="/downloads/hardware/cardboarduino/cardboarduino-20100423.graffle">OmniGraffle</a>) </li>
+	<li>Version 20100423 of the Cardboarduino (<a href="/pdf/cardboarduino-20100423.pdf">PDF</a>, <a href="/hardware/cardboarduino-20100423.graffle">OmniGraffle</a>) </li>
 	<li>Version 20100129 of the Cardboarduino (<a href="/pdf/cardboarduino-20100129.pdf">PDF</a>) </li>
 </ul>

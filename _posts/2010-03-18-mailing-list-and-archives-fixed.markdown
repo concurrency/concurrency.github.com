@@ -8,8 +8,8 @@ For a long time, there weren't many "new" people working with our tools. Therefo
 
 I've moved things around. Our lists are now completely open.
                
- * Our list for **users** of process-oriented programming (things like Plumbing, or JCSP, etc.) is <users@concurrency.cc> ([list homepage](http://unhosting.org/mailman/listinfo/users)).
+ * Our list for **users** of process-oriented programming (things like Plumbing, or JCSP, etc.) is <users@concurrency.cc>.
 
- * Our list for **developers** working on these kinds of tools (contributing to Plumbing, etc.) is <developers@concurrency.cc> ([list homepage](http://unhosting.org/mailman/listinfo/developers)).
+ * Our list for **developers** working on these kinds of tools (contributing to Plumbing, etc.) is <developers@concurrency.cc>.
 
-Please join in the fun. I'll try and get another post up over break about things that are going on with the team. (Also, we'll know whether we're a GSoC participant!)
+You can join either list from our [mailing lists](/docs/mailinglists.html) page. Please join in the fun. I'll try and get another post up over break about things that are going on with the team. (Also, we'll know whether we're a GSoC participant!)

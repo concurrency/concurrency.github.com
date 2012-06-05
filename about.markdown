@@ -8,10 +8,11 @@ We are a group of educators and researchers exploring the development of tools t
 
 ### occam-&pi;
 
-[occam-&pi;](http://www.occam-pi.org/) was originally designed under the guidance of [David May](http://www.xmos.com/team/david-may), implemented by the fine people at [Inmos Ltd.](http://www.inmos.com/), and shepherded by [Professor Peter Welch][phw] at the University of Kent in Canterbury, England for the past 20 years (give or take). Many of the features that put the &pi; in occam-&pi; were implemented by [Fred Barnes][frmb]. 
+[occam-&pi;](http://www.occam-pi.org/) was originally designed under the guidance of [David May][dmay], implemented by the fine people at [Inmos Ltd.](http://www.inmos.com/), and shepherded by [Professor Peter Welch][phw] at the University of Kent in Canterbury, England for the past 20 years (give or take). Many of the features that put the &pi; in occam-&pi; were implemented by [Fred Barnes][frmb].
 
 [phw]:  http://www.cs.kent.ac.uk/people/staff/phw/
 [frmb]: http://www.frmb.org/
+[dmay]: http://en.wikipedia.org/wiki/David_May_(computer_scientist)
 
 The [Transterpreter][tvm], which allows us to run occam-&pi; on tiny platforms like the [Arduino][arduino], was originally designed and written by [Christian Jacobsen][clj] and [Matt Jadud][mcj]. It was extended and improved by [Damian Dimmich](), [Carl Ritson](), [Adam Sampson][ats], and [Jon Simpson][js]. The [c.cc board](/hardware/) was designed by [Omer Kilic][ok]. The concurrency.cc logo was designed by [Geoffrey Long][gl].
 

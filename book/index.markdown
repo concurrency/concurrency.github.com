@@ -37,4 +37,4 @@ The text is primarily authored by three members of the occam-&pi; research colle
 
 ### Our Users
 
-*Plumbing for the Arduino* has been used by a [number of students](students), some of whose feedback helped shape and/or correct our writing. 
+*Plumbing for the Arduino* has been used by a [number of students](students.html), some of whose feedback helped shape and/or correct our writing.

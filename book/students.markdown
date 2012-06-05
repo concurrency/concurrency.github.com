@@ -1,6 +1,6 @@
 ---
-_template: sidebar-image.mako
-title: Users of PftA
+layout: sidebar-image
+title: Users of Plumbing for the Arduino
 sidebar: /images/20100130-plumbing-book-cover2.png
 ---
 

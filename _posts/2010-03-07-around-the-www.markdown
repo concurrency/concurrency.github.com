@@ -40,7 +40,7 @@ The `adc` process communicates its reading down the `adcResp` channel, and proce
 #### Step 5
 The `switch` process takes the value it received from `adc` (it was waiting), and sends that on to the `fader` process (who is also waiting). 
 
-There is a 1:1 correspondence between this diagram and the code we write. If you want to see an implementation of this tri-LED fader, you can [see it in our repository](http://projects.cs.kent.ac.uk/projects/kroc/trac/browser/kroc/trunk/tvm/arduino/occam/lavalamp3.occ). I'll eventually write this up as a sequence of short chapters in the [book](http://concurrency.cc/book), but I simply haven't had time yet. (And, actually, that code needs some comments. I use replicated syntaxes to keep it short, but those should probably be explained.)
+There is a 1:1 correspondence between this diagram and the code we write. If you want to see an implementation of this tri-LED fader, you can [see it in our repository](http://projects.cs.kent.ac.uk/projects/kroc/trac/browser/kroc/trunk/tvm/arduino/occam/lavalamp3.occ?rev=6380). I'll eventually write this up as a sequence of short chapters in the [book](http://concurrency.cc/book), but I simply haven't had time yet. (And, actually, that code needs some comments. I use replicated syntaxes to keep it short, but those should probably be explained.)
 
 ### Plumbing is for concurrency
 

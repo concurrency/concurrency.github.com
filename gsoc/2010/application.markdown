@@ -39,7 +39,7 @@ No we have not applied to GSoC in the past.
 GNU GPL 2.0, LGPL
 
 ##### What is the URL for your ideas page?
-[Ideas page](/gsoc/2010/ideas)
+[Ideas page](/gsoc/2010/ideas.html)
 
 ##### What is the main development mailing list for your organization?
 <developers@concurrency.cc>

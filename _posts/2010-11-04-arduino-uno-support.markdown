@@ -29,10 +29,10 @@ changelog; and building software on Windows is just never fun.
 
 But now the Arduino Uno support is finally here. Mac OS X and Windows versions
 should update themselves, otherwise you can download the packages from the
-[download page](/download). The Ubuntu packages have not yet been updated, but
+[download page](/download.html). The Ubuntu packages have not yet been updated, but
 this should happen at some point in the future (pester Matt about this). Any
 problems with the packages should be reported on one of the [mailing
-lists](/docs/mailinglists).
+lists](/docs/mailinglists.html).
 
 Arduino Uno support is available starting with these versions of the
 Transterpreter:

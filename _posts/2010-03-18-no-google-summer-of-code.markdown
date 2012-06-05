@@ -16,8 +16,8 @@ attractive as a mentoring organisation for GSoC in the future. Building a
 bigger and more active community is probably a good start in this respect.
 
 So, while we're not going to get any Google Summer of Code interns this year,
-that should not stop anyone from [downloading](/download) the software, joining
-the [mailing lists](/docs/mailinglists), and doing awesome stuff. 
+that should not stop anyone from [downloading](/download.html) the software, joining
+the [mailing lists](/docs/mailinglists.html), and doing awesome stuff.
 
 Congrats to [all the organisations that did get
 accepted](http://socghop.appspot.com/gsoc/program/accepted_orgs/google/gsoc2010).

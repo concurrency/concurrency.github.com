@@ -13,11 +13,10 @@ We created a dedicated Twitter feed for the site. You can follow [concurrencycc]
 
 ### Mailing Lists
 We have two new mailing lists:
-  
-  * users@concurrency.cc ([list homepage](http://unhosting.org/mailman/listinfo/users))
-  * developers@concurrency.cc ([list homepage](http://unhosting.org/mailman/listinfo/developers))
+* users@concurrency.cc
+* developers@concurrency.cc
 
-You can join either or both of these lists by visiting their Mailman subscription pages. (Or, if you want, drop matt at concurrency dot cc an email.)
+You can join either or both of these lists using the details on our [mailing lists](/docs/mailinglists.html) page. (Or, if you want, drop matt at concurrency dot cc an email.)
 
 These are not strictly limited to people exploring occam on the Arduino. Our long-term goal is that people exploring process-oriented programming find a home for their projects under this domain. If you start exploring Plumbing and have questions, that is a *great* place to ask. Everyone involved in the creation of Plumbing (and, for that matter, everyone working on occam-&pi;) can be found there.
 
