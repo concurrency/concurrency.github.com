@@ -4,7 +4,7 @@ title: The Cardboarduino
 ---
 <img src="/images/allegheny-college-bently.png" align="right"/>
 
-Inspired by the <a href="http://lab.guilhermemartins.net/2009/05/06/paperduino-prints/">PAPERduino</a> by Guilherme Martins, the Cardboarduino was developed by Matt Jadud, a member of the faculty at <a href="http://allegheny.edu/">Allegheny College</a> in the <a href="http://cs.allegheny.edu/">Department of Computer Science</a>. It was originally designed to introduce students in <a href="http://act.ivism.org/">FS102: Technology and Activism</a> and <a href="http://act.ivism.org/">FS102: Art and Activism</a> to the fundamentals of soldering and working with physical computation. To date, over 40 people have built Cardboarduinos.
+Inspired by the <a href="http://lab.guilhermemartins.net/2009/05/06/paperduino-prints/">PAPERduino</a> by Guilherme Martins, the Cardboarduino was developed by Matt Jadud, a member of the faculty at <a href="http://allegheny.edu/">Allegheny College</a> in the <a href="http://cs.allegheny.edu/">Department of Computer Science</a>. It was originally designed to introduce students in <b>FS102: Technology and Activism</b> and <b>FS102: Art and Activism</b> to the fundamentals of soldering and working with physical computation. To date, over 40 people have built Cardboarduinos.
 
 The Cardboarduino is physically larger than the PAPERduino, and includes space for a 9V battery clip. 
 
