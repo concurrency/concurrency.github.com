@@ -3,14 +3,16 @@
 This is the source repository for the Concurrency.cc website.
 The website is generated directly from here using [Github Pages][ghp], which uses [Jekyll][jekyll].
 To contribute to the site, you'll need to use Git and [Markdown][markdown] - all of the principles are the same as detailed in the Github Pages and Jekyll documentation.
+You'll need to install [Pygments][pygments] to properly render posts containing source code highlighting.
 If you're doing more than editing an existing page or adding a new blog post, you might find you need some HTML.
 If you're in doubt about some changes, or are uncertain about anything [get in touch][devlist] on the developers mailing list and we'll help out.
 If you've got something finished, submit a [pull request][ghpullreq].
 
-[ghp]: http://pages.github.com/
+[ghp]: http://pages.github.com
 [jekyll]: https://github.com/mojombo/jekyll
 [devlist]: http://concurrency.cc/docs/mailinglists.html
 [markdown]: http://daringfireball.net/projects/markdown/
+[pygments]: http://pygments.org
 [ghpullreq]: https://help.github.com/articles/using-pull-requests
 
 ## Building/Testing
@@ -19,13 +21,17 @@ The site's template use absolute URLs, which makes previewing from the static HT
 Handily, this can be avoided by using Jekyll in server mode to preview the site, in which it provides a built in webserver (defaulting to port 4000) with the output served up.
 This is a great way to test changes before committing - you can combine it with Jekyll's auto-reloading of changed files by running the following command in the root of the site sources.
 
-	jekyll --server --auto
+	jekyll --server --auto --pygments
 
-If the site doesn't seem to be rebuilding with the above command properly, there might be an error in the markdown - try running Jekyll without any arguments to see if there's any parse error reporting.
+You can then find the site running at http://localhost:4000/.
+If the site doesn't seem to be rebuilding with the above command properly, there might be an error in the markdown - try looking at the terminal which is running Jekyll to see if there are reported errors.
 
-## Known Problems
+## Known Issues
 
 The default YouTube and Vimeo embed codes cause problems converting Markdown into HTML (due to Maruku's overly strict parsing). As of June 2012 (these) can be fixed by:
 
 * Ensuring `allowFullScreen` and similar attributes all have values set (i.e. allowFullScreen becomes `allowFullScreen="true"` or similar)
 * For Vimeo, ensure there is HTML between the `<iframe>` tags, as otherwise the output will be truncated. It's easiest to move the credit line (Video Name by Author on Vimeo) into the iFrame tag, although a blank `<p>` tag will also suffice.
+
+Jekyll's integration with Pygments is sensitive to the latest versions of both. If you see an error like `Liquid error: undefined method 'join' for...` on pages with code highlighting, try updating Jekyll (`gem update jekyll`), or check that Pygments is up to date.
+If you see a message saying `Liquid error: No such file or directory - posix_spawnp`, you most likely don't have Pygments installed.

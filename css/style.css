@@ -206,11 +206,6 @@ pre {
   padding: 0.2em;
 }
 
-
-
-
-
-
 div .blog_nav {
   margin-top: -15px;
   margin-bottom: 10px;
@@ -221,4 +216,9 @@ div .blog_nav {
 
 .blog_nav #next {
   float: right;
+}
+
+.highlight pre {
+    font-family: Menlo, Monaco, monospace;
+    font-size: 10pt;
 }
