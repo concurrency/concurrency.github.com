@@ -26,7 +26,7 @@ In our first session of Adruino Learning, we managed to alter the "Fade" demo, t
 
 Here is a code snippet of how we got it to work.
 
-<pre>
+{% highlight c %}
 /*
 Fade
 
@@ -67,4 +67,5 @@ void loop()  {
   // wait for 30 milliseconds to see the dimming effect    
   delay(30);  
 }
-</pre>
+
+{% endhighlight %}
