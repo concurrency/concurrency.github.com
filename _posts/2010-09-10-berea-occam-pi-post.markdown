@@ -11,7 +11,8 @@ So, today we started with the basics of Occam-pi - the parrallel processing lang
 We decided to try by making three LEDs blink in parralle (concurency to be more accurrate). This is a trivial task that does not really test our programming skills, but more our abilities in circuitry. It was a nice refresher of how to build parrallel and series circuits. 
 
 See this cool video below.
-<object width="480" height="360"><param name="movie" value="http://www.youtube.com/v/b7pGnOaTddc?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/b7pGnOaTddc?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="480" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+<p align="center"><object width="480" height="360"><param name="movie" value="http://www.youtube.com/v/b7pGnOaTddc?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/b7pGnOaTddc?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="480" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
 
  ## Did You Know
 
