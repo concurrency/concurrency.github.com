@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Chad Peruggia , Renaldo Pierre-Louis
-title: "Planning & The Transterperter"
+title: "Planning &amp; The Transterperter"
 ---
 
 Today, class did not proceed as planned from last class period. We had planned on working with the arduinos, unfortunately, some guy name Matt Jadud locked the arduinos in his office. Consequently, today consisted of redefining the direction we want this course to go in. We have have decided that we should: 
