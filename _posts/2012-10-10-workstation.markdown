@@ -19,3 +19,4 @@ After further discussion, we are considering working in either Python or Ruby.  
 It takes 341 licks to reach the center of a tootsie pop? AMAZING!  I am kidding, that was a little easter egg for our readers.
 
 Setting up a UDP port is similar in almost every language.  We saw two examples today and they were almost identical in sytanx and complexity.  This gives us hope that regardless of what language we decide to use, the complexity will be on par with other languages. 
+
