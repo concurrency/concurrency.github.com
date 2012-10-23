@@ -21,18 +21,18 @@ That _self_ is needed in python and not ruby! This might not seem like much, but
 
 
 For example:
-<pre>
+
 Ruby: 
-class myClass 
-    def myFunc(name)
-        @name = name 
-    end 
-end
+		class myClass 
+    		def myFunc(name)
+        		@name = name 
+    		end 
+		end
 
 Python: 
-class myClass
-    def myFunc(self, name)
-        self.name = name
-</pre>
+		class myClass
+    		def myFunc(self, name)
+        	self.name = name
+
 		
 For more information read [here](http://stackoverflow.com/questions/2709821/python-self-explained)
