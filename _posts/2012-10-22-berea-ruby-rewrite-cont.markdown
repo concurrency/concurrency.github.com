@@ -23,19 +23,19 @@ For example:
 Ruby: 
 
 {% highlight ruby %}
-		class myClass 
-    		def myFunc(name)
-        		@name = name 
-    		end 
-		end
+class myClass 
+    def myFunc(name)
+        @name = name
+    end
+end
 {% endhighlight %}
 
 Python: 
 
 {% highlight python %}
-		class myClass
-    		def myFunc(self, name)
-        	self.name = name
+class myClass
+    def myFunc(self, name):
+        self.name = name
 {% endhighlight %}
 
 For more information read [here](http://stackoverflow.com/questions/2709821/python-self-explained)
