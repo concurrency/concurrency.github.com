@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Chad Peruggia , Renaldo Pierre-Louis
-title: "Flight Similator Setup"
+title: "Flight Simulator Setup"
 ---
 
 After our meeting with Dr. Jadud and Dr. Pearce to go over our semester goals, we decided that setting up our simulation environment was the next step required for progress. Dr. Jadud informed us of FlightGear, a sophisticated, professional, open-source flight simulator. So, we decided to give it a try. The plan was to figure out how to fly a plane, and receive flight data via UDP. This did not happen.
@@ -16,4 +16,4 @@ Still, we managed to get the plan in the air for a few seconds (before crashing 
 
 ## Solutions
 
-We are planning on getting a Mac workstation, which should be more than enough to run this software and anything else that we will need to run. So, those issues of not having powerful enough hardware will not be repeated. Hopefully, we will have that set up by next week so we can begin learning the simulator and transfering flight data via UDP.
+We are planning on getting a Mac workstation, which should be more than enough to run this software and anything else that we will need to run. So, those issues of not having powerful enough hardware will not be repeated. Hopefully, we will have that set up by next week so we can begin learning the simulator and transferring flight data via UDP.

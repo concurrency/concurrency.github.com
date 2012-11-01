@@ -18,11 +18,11 @@ This method of control allowed them to keep the plane leveled by reading in sens
 
 ## First Steps
 
-We plan on learning how to interact with the arduino micro-controller before moving forward with the project.  We need to have an understanding of the hardware and its limitations so we can devise a well planned design and approach to planned innovations.
+We plan on learning how to interact with the Arduino micro-controller before moving forward with the project.  We need to have an understanding of the hardware and its limitations so we can devise a well planned design and approach to planned innovations.
 
 ## Did You Know
 
-In our first session of Adruino Learning, we managed to alter the "Fade" demo, to inclue a blink to the LED.  Once the light would fade on, we would blink off, blink on, then fade out.  Although this is simple, we had trouble figuring out where to place the code as we aren't used to programming in a loop type structure that the Arduino uses.
+In our first session of Arduino Learning, we managed to alter the "Fade" demo, to include a blink to the LED.  Once the light would fade on, we would blink off, blink on, then fade out.  Although this is simple, we had trouble figuring out where to place the code as we aren't used to programming in a loop type structure that the Arduino uses.
 
 Here is a code snippet of how we got it to work.
 
