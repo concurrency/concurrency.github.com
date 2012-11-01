@@ -13,12 +13,12 @@ We are planning to change the elevation of the plane by using a proportional con
 We feel that this will give the plane a more realistic and faster accent / decent to desired altitudes.
 
 ##Complications
-We ran into a small error when converting the Python to Ruby due to syntax differences.  We were missing and end statement, and we couldn't figure out why.  This was causing errors with our class functions when we tried to call them , since the methods were being created in an If / Else statement.  Once we found this error, which took forever, it was smooth sailiing to get the code to run.
+We ran into a small error when converting the Python to Ruby due to syntax differences.  We were missing and end statement, and we couldn't figure out why.  This was causing errors with our class functions when we tried to call them , since the methods were being created in an If / Else statement.  Once we found this error, which took forever, it was smooth sailing to get the code to run.
 
 ##Whats Next
 In order to finish in time, we figured we need to meet more during the semester since we need access to the simulator.  We are discussing these plans, and something will be worked out soon. 
 
-Our next step in our development plan is to finish getting the ruby working, then we plan to try and implement the GPS, but we are unsure due to time contraints.
+Our next step in our development plan is to finish getting the ruby working, then we plan to try and implement the GPS, but we are unsure due to time constraints.
 
 ##Did You Know?
 We don't have anything, since we don't know anything either to share!

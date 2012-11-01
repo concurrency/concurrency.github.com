@@ -12,27 +12,30 @@ Due to this, we decided to give ourselves homework, yes you read that correct.  
 
 ##Challenges
 
-As previously stated, we can't figure out what the set_point is or its purpose.  This is a small challenege, but it is important that we understand all aspects of these controls before we move forward with our plans.  Once we grasp PID's and how they work, we should make steady progress.  We plan to overcome these challenges via homework and personal research.
+As previously stated, we can't figure out what the set_point is or its purpose.  This is a small challenge, but it is important that we understand all aspects of these controls before we move forward with our plans.  Once we grasp PID's and how they work, we should make steady progress.  We plan to overcome these challenges via homework and personal research.
 
 ##Did You Know?
 
 That _self_ is needed in python and not ruby! This might not seem like much, but saving all that time from that four letter word can add up to minutes!
 
-
-
 For example:
 
 Ruby: 
+
+{% highlight ruby %}
 		class myClass 
     		def myFunc(name)
         		@name = name 
     		end 
 		end
+{% endhighlight %}
 
 Python: 
+
+{% highlight python %}
 		class myClass
     		def myFunc(self, name)
         	self.name = name
+{% endhighlight %}
 
-		
 For more information read [here](http://stackoverflow.com/questions/2709821/python-self-explained)
