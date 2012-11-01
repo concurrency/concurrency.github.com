@@ -23,7 +23,7 @@ For example:
 Ruby: 
 
 {% highlight ruby %}
-class myClass 
+class myClass
     def myFunc(name)
         @name = name
     end
@@ -33,7 +33,7 @@ end
 Python: 
 
 {% highlight python %}
-class myClass
+class myClass:
     def myFunc(self, name):
         self.name = name
 {% endhighlight %}
