@@ -10,14 +10,13 @@
         <div class="grid_4">
            <h4>Latest Blog Updates</h4>
             <ul>
-                <li style="list-style: none">
                 {% for post in site.posts limit: 5 %}
                 <li>
                     <a href="{{ post.url }}">{{ post.title }}</a><br>
                     {{ post.date | date:'%B %d, %Y' }}
                 </li>
                 {% endfor %}
-                </li>
+                <li><a href="/blog/" style="font-size: 10pt; color: #eee;">More&hellip;</a></span></li>
             </ul>
         </div>
         <div class="grid_4">
