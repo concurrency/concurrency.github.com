@@ -26,6 +26,12 @@ This is a great way to test changes before committing - you can combine it with 
 You can then find the site running at http://localhost:4000/.
 If the site doesn't seem to be rebuilding with the above command properly, there might be an error in the markdown - try looking at the terminal which is running Jekyll to see if there are reported errors.
 
+## Editing
+
+The folder structure for templates/includes can be non-obvious. The `_layouts` directory is your first port of call, this is where the HTML wrappers that the content ends up in are (the layout used for each page is specified in its preamble).
+
+The layouts frequently use includes to re-use blocks or pieces of information that we don't want to have in multiple places - these are located in `_includes`.
+
 ## Known Issues
 
 The default YouTube and Vimeo embed codes cause problems converting Markdown into HTML (due to Maruku's overly strict parsing). As of June 2012 (these) can be fixed by:
