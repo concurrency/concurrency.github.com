@@ -76,5 +76,6 @@ If you'd like to help improve anything we've produced &mdash; our software, our 
 
 If you're familiar with Subversion, we do make [repository space available for members of the community][repos]. This means your code is backed up, others can see what you're working on (and help!), and your efforts benefit many, even if you're just getting started. (It also makes it easier for others to help you out.) Note, though: your code must be released under a GPL- or LGPL-compatible license if we're going to host it.
 
+[lists]: /docs/mailinglists.html
 [repos]: http://projects.cs.kent.ac.uk/projects/kroc/trac/browser/kroc/trunk/tvm/arduino/community
 
