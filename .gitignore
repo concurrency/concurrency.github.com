@@ -4,3 +4,6 @@
 
 # Never commit the Jekyll output.
 _site/
+
+# Ignore Mac spoo
+.DS_Store
