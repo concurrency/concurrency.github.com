@@ -7,10 +7,17 @@
 
 html,
 body {
-  font-size: 100%; }
+  font-size: 100%; 
+}
 
 body {
   background: white;
+  /*
+  background-image: url(/images/20100130-cc-logo2.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  */
+
   color: #222222;
   padding: 0;
   margin: 0;
@@ -1055,7 +1062,7 @@ dl {
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 1.25em;
-  list-style-position: outside;
+  list-style-position: inside;
   font-family: inherit; }
 
 /* Unordered Lists */
@@ -1080,7 +1087,9 @@ ul.no-bullet {
 ol li ul,
 ol li ol {
   margin-left: 1.25em;
-  margin-bottom: 0; }
+  margin-bottom: 0; 
+  list-style-position: inside;
+}
 
 /* Definition Lists */
 dl dt {
