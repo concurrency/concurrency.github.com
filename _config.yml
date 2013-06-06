@@ -1,6 +1,7 @@
 # Disable automatic regeneration
-# auto: false
+auto: true
 
 # Enable syntax highlighting
 pygments: true
 
+paginate: 5
