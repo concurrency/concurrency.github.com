@@ -1,0 +1,23 @@
+
+<div class="span4 pull-right">    
+  
+  {% if page.layout == "default" %}  
+  <!-- Image only on default pages -->
+  <div style="text-align: center;">
+    <img src="/images/20100130-cc-logo2.png" width = 150/>
+  </div>
+  {% endif %}
+  
+  <h3 id="list">Recent Posts</h3>
+    
+    
+  <div class="well" style="padding: 8px 0;">
+    <ul class="nav nav-list">
+
+      {% for p in site.posts limit: 10%}
+        <li><a href="">{{p.title}}</a><span style="font-size:50%;">{{ p.date | date: "%B %d") }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
