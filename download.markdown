@@ -9,7 +9,7 @@ To write parallel programs for your Arduino in occam, you need three things:
 
 1. **Plumb**. This tool handles compiling your code and uploading it to the Arduino.
 
-1. **A 'net connection**. For the moment, we put our Arduino compiler in the cloud. You'll need an Internet connection to compile your programs.
+1. **A 'net connection**. For the moment, we put our Arduino compiler in the cloud. You'll need an Internet connection to compile your programs. (Linux and Mac users [can follow other paths](#FIXME).)
 
 # Download Plumb
 
