@@ -1,0 +1,37 @@
+---
+layout: front_page
+title: Home
+---
+
+{% for post in paginator.posts %}
+  <section class="post">
+    <hr/>
+  <h2><a href="{{ post.url }}">{{ post.title }} </a></h2>
+    <section class="post-date">
+      <span class="label label-inverse">{{ post.date | date: "%A, %B %d, %Y") }}</span>
+    </section>
+    <hr/>
+    {{ post.content }}
+  </section>
+  <section class="divider"></section>
+{% endfor %}
+
+<hr/>
+
+<section id="paging" style="text-align: center; font-size: 125%;">
+  <h3>
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a href="/">&lArr; Previous Page</a>
+    {% else %}
+      <a href="/page{{ paginator.previous_page }}">&lArr; Previous Page</a>
+    {% endif %}
+  {% endif %}
+
+  Page {{ paginator.page }} of {{ paginator.total_pages }}
+
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}">Next Page &rArr;</a>
+  {% endif %}
+</h3>
+</section>
