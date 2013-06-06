@@ -1,17 +1,18 @@
 ---
 layout: default
 title: Grab and Go!
+current-version: Plumb-20130606
 ---
 
 ## plumb for the Arduino
 
 First, grab plumb, which will let you run occam programs on your Arduino. 
 
-* [Mac][mac]
-* [Windows][windows]
+* [Plumb for Mac][mac-plumb]
+* [Plumb for Windows][windows-plumb]
 
-[mac]: plumb.dmg
-[windows]: plumb.zip
+[mac-plumb]: http://jadud.com/downloads/Plumb-20130606.dmg
+[windows-plumb]: http://jadud.com/downloads/Plumb-20130606.zip
 
 Drag-and-drop the app (Mac) or folder (Windows) somewhere, pin it to your dock/start menu. Plug in your Arduino, launch the app, and you're almost ready to go.
 
@@ -19,10 +20,26 @@ Drag-and-drop the app (Mac) or folder (Windows) somewhere, pin it to your dock/s
 
 Before you can do anything, you're going to need a text editor. Word or Open Office won't cut it; this is code, not prose.
 
-* **Windows**: We recommend Notepad++ or GEdit.
-* **Mac**: TextWrangler, Textmate, GEdit, or many other editors will work just fine.
+We have a version of GEdit you can download for Mac and Windows. These versions include syntax highlighting for occam, which is very handy.
 
-On all platforms, Emacs or vi are options if you're feeling hardcore.
+
+* [GEdit for Mac][mac-gedit]
+* [GEdit for Windows][windows-gedit]
+
+[mac-gedit]: http://jadud.com/downloads/gedit.app.zip
+[windows-gedit]: http://jadud.com/downloads/gedit-win.zip
+
+## Getting Started 
+
+Using Plumb is easy-peasy. We have a 30 second video that shows you everything you need to know.
+
+**ADD VIDEO HERE**
+
+### Configuring GEdit
+
+GEdit has some really nice features when it comes to writing code. This 30 second video walks you through choosing options that will make your programming experience all that much better!
+
+**ADD VIDEO HERE** 
 
 ## Explore!
 
