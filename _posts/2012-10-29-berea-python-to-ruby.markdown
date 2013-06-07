@@ -4,7 +4,6 @@ author: Renaldo Pierre-Louis, Chad Peruggia
 title: Python to Ruby Continued
 ---
 
-##Current Progress
 We have continued our desire to rewrite past code from python to ruby, and we have the PID fully rewritten, as well as a class written for the controls of the plane.  We did make slight changes to the structure of the code, as well as a plan to fix the elevation change.
 
 ###New Elevation Controller

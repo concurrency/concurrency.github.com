@@ -4,7 +4,6 @@ author: Renaldo Pierre- Louis , Chad Peruggia
 title: Analyzing the ArduPilot
 ---
 
-##Update
 We have decided to go through our code and compare it to one that is known to work, the ArduPilot.  Since we have known issues with our pitch controller, we decided to look there.  At first we were confused, as this is a rather large program with many files, and we had to figure out where variables were coming from and where they were being set.  We had to understand the parameters of the functions before we can figure out how the functions work.
 
 About an hour later, we feel like we have a good understanding of how they work and where we went wrong.

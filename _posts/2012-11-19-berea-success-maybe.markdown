@@ -4,7 +4,6 @@ author: Chad Peruggia , Renaldo Pierre-Louis
 title: "Success ? Maybe so! " 
 ---
 
-##Updates
 So after our meeting with Dr. Jadud, we found that we needed to incorporate a rate of climb to control our pitch.  Today we started on trying to implement this, and we feel that we have succeeded!  Our plane is able to obtain our desired alititude (+-25 ft).  This is a major breakthrough for us because we haven't been able to obtain such success yet.  We were able to test decreasing and increasing altitude and all worked as desired.  Although it does go down a bit fast, it doesn't fall out of control, and everything went well.
 
 ##Whats next?

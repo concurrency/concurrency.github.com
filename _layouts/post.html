@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>c.cc: {{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parallel Programming for Makers and Artists">
+    <meta name="author" content="Matt Jadud et al.">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+      {% include stylesheets.html %}
+  </head>
+
+  <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+
+
+  <!-- Navbar
+    ================================================== -->
+    {% include top-nav.html %}
+    
+    <div class="container">
+
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="row">
+    <div class="span6">
+      <h1>c.cc</h1>
+      <p class="lead"> </p>
+    </div>
+  </div>
+</header>
+
+<section >
+  {% include recent-post-list.html %}
+  <section class="post-date">
+    <small>{{page.author}}</small>
+    <span class="label label-inverse offset3">{{ page.date | date: "%A, %B %d, %Y") }}</span>
+    <hr>
+  </section>
+
+  
+  {{content}}
+</section>
+
+<br><br><br><br>
+
+    {% include footer.html %}
+
+    </div><!-- /container -->
+    
+    {% include footer-javascript.html %}
+  </body>
+</html>

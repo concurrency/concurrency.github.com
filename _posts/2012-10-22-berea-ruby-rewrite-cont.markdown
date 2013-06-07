@@ -4,7 +4,6 @@ author: Renaldo Pierre-Louis, Chad Peruggia
 title: Ruby Rewrite PID
 ---
 
-##Rewriting is FUN!
 
 We have continued our progress into rewriting the old python scripts into ruby following our object model.  We have started to try and decipher the PID controller and how it is interacting with the data from the simulator, some of it makes sense, parts of it don't, mostly what a set_point is.  We can't seem to figure out what this is, or what its purpose is, or why it is always 0 to start.
 
