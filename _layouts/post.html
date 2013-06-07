@@ -38,11 +38,19 @@
 <section >
   {% include recent-post-list.html %}
   <section class="post-date">
+    {% if page.previous.url %} 
+    <span style="float:left;font-size:80%;"><a href="{{page.previous.url}}" title="Previous Post: 
+{{page.previous.title}}">&laquo; {{page.previous.title}}</a></span>
+    {% endif %}
+    {% if page.next.url %} 
+    <span style="float:right;font-size:80%;"><a href="{{page.next.url}}" title="next Post: 
+{{page.next.title}}">{{page.next.title}} &raquo; </a></span><br/>
+    {% endif %} 
+    <br/>
     <small>{{page.author}}</small>
-    <span class="label label-inverse offset2">{{ page.date | date: "%A, %B %d, %Y") }}</span>
+    <span style="float:right;" class="label label-inverse">{{ page.date | date: "%A, %B %d, %Y") }}</span><br/>
     <hr>
   </section>
-
   
   {{content}}
 </section>
