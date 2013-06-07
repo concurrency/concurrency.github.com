@@ -8,7 +8,8 @@ title: Home
     <hr/>
   <h2><a href="{{ post.url }}">{{ post.title }} </a></h2>
     <section class="post-date">
-      <span class="label label-inverse">{{ post.date | date: "%A, %B %d, %Y") }}</span>
+      <span class="label label-inverse">{{ post.date | date: "%A, %B %d, %Y") }}</span><br/>
+      <small>{{post.author}}</small>
     </section>
     <hr/>
     {{ post.content }}

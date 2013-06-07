@@ -4,9 +4,6 @@ author: Chad Peruggia , Renaldo Pierre-Louis
 title: "Setting the Pitch"
 ---
 
-## Discoveries
-
-###Previous PID Issues
 So, we previously explained that the current autopilot code would "fish-tail" its way up to the desired altitude. Today, we believed that we found out why it was behaving in such ways.
 Initially, we researched and brainstormed to gain a better understanding how this PID thing really worked. After reading a couple of papers and discussing them, we arrived to the understanding that what we needed to control was the Constant multipliers in the PID controllers.
 
