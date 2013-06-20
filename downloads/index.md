@@ -69,7 +69,13 @@ We also have a [number of docs and books that you might find useful][docs]. Plea
 [docs]: /docs
 [userlist]: http://lists.concurrency.cc/mailman/listinfo/users
 
+## The Source
 
+Plumb is open source software. Check us out on [Github](http://github.com/concurrencycc).
+
+If you want to contribute, [join our developers list][developers] and we'll do our best to help you pitch in!
+
+[developers]: http://lists.concurrency.cc/mailman/listinfo/developers
 
 {% comment %}
 ### A Text Editor
