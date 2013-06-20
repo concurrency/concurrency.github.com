@@ -30,6 +30,35 @@ The first upload will take a while, because we're doing a lot of work; each time
 
 There's no issues in flipping back-and-forth between Plumb and the Arduino environment; we're just uploading (somewhat special) sketches.
 
+As of June 2013, **we support the following members of the Arduino family**:
+
+<table>
+<tr><td width='80px'>  <b>V</b> </td> <td width='80px'>  <b>MHz</b> </td> <td width='80px'>  <b>CPU</b> </td> <td>  <b>Boards</b> </td></tr>
+<tr><td colspan='4'><hr/></td></tr>
+<tr><td>  5 </td> <td>  16  </td> <td>  328 </td> <td>  Duemilanove, Freeduino, Nano 3.0, Pro Mini </td></tr>
+</table>
+
+<p> &nbsp; </p>
+
+Ordered and coming soon:
+
+
+<table>
+<tr><td width='80px'>  <b>V</b> </td> <td width='80px'>  <b>MHz</b> </td> <td width='80px'>  <b>CPU</b> </td> <td>  <b>Boards</b> </td></tr>
+<tr><td colspan='4'><hr/></td></tr>
+<tr><td>  3.3 </td> <td>  8 </td> <td>  328 </td> <td>  Mini </td> </tr>
+<tr><td>  5 </td> <td>  16 </td> <td>  2560 </td> <td>  Mega </td></tr>
+<tr><td>  5 </td> <td>  16 </td> <td>  328 </td> <td>  Uno </td> </tr>
+<tr><td>  5 </td> <td>  16 </td> <td>  32u8 </td> <td>  Leonardo </td> </tr>
+</table>
+
+
+{% comment %}
+## Tutorials
+
+We're developing a series of video and text tutorials to help you explore parallel programming with your Arduino.
+{% endcomment %}
+
 ## Explore!
 
 Once you open plumb, you can use the "Help" menu to pop open some examples as well as browse documentation that will get you started.
@@ -39,6 +68,7 @@ We also have a [number of docs and books that you might find useful][docs]. Plea
 [ccc]: http://twitter.com/concurrencycc
 [docs]: /docs
 [userlist]: http://lists.concurrency.cc/mailman/listinfo/users
+
 
 
 {% comment %}

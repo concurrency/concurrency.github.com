@@ -1,7 +1,12 @@
 # Disable automatic regeneration
 auto: true
-
 # Enable syntax highlighting
 pygments: true
-
 paginate: 5
+
+# Global variables
+plumb_mac: http://jadud.com/downloads/Plumb-20130606.dmg
+plumb_win: http://jadud.com/downloads/Plumb-20130606.zip
+
+gedit_mac: http://jadud.com/downloads/gedit.app.zip
+gedit_win: http://jadud.com/downloads/gedit-win.zip
