@@ -9,12 +9,14 @@ First, grab Plumb, which will let you run write occam programs and run them on y
 
 * [Plumb for Mac (ver. 130620)][mac-plumb]
 * [Plumb for Windows (ver. 130620)][windows-plumb]
+* [Plumb for Linux (ver. 130620)][linux-plumb]
 
 [mac-plumb]: http://jadud.com/downloads/Plumb-20130620.dmg
 [windows-plumb]: http://jadud.com/downloads/Plumb-20130620.zip
+[linux-plumb]: http://jadud.com/downloads/Plumb-20130620.tar.gz
 
-Drag-and-drop the app (Mac) or folder (Windows) somewhere, pin it to your dock/start menu. Plug in your Arduino, launch the app, and you're almost ready to go.
-
+Drag-and-drop the app (Mac) or folder (Windows) somewhere, pin it to your dock/start menu. Plug in your Arduino, launch the app, and you're almost ready to go. Linux users, double-click the "Plumb" app in the "bin" directory after you expand it. (The Linux version was built on a 32-bit, Debian 7 machine; please report any issues you encounter.)
+ 
 <p align="center">
   <img src="/images/plumb-editor.png">
 </p>
