@@ -3,8 +3,6 @@ layout: default
 title: occam-pi Documentation
 ---
 
-## About occam-pi
-
 occam-pi is not the newest language on the block, but it is part of a small family of languages that are inherently parallel. Erlang, Google's Go, and XC by XMOS are three of the few languages that were designed from the ground up for expressing code that is intended to run in parallel. (And yes, there are others. But they're not common. Well, there's CUDA... but that's not a simple tool to dive into, and it doesn't work on your $20 Arduino.) 
 
 We're using occam-pi because the language is:

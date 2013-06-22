@@ -3,8 +3,6 @@ layout: default
 title: Grab and Go!
 ---
 
-## Plumb for the Arduino
-
 First, grab Plumb, which will let you run write occam programs and run them on your Arduino. 
 
 * [Plumb for Mac (ver. 130622)][mac-plumb]
