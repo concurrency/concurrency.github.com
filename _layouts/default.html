@@ -49,9 +49,16 @@
 </header>
 
 <section >
-  {% include recent-post-list.html %}
-    <h2>{{page.title}}</h2>
-  {{content}}
+    <div class="row">
+      <div class="span8">
+        <h2>{{page.title}}</h2>
+        {{content}}
+      </div>
+      <div class="span3  pull-right">
+        {% include recent-post-list.html %}
+      </div>
+    </div>
+
 </section>
 
 <br><br><br><br>

@@ -1,5 +1,5 @@
 
-<div class="span4 pull-right">    
+<!-- <div class="span4 pull-right">  -->
   
   {% if page.layout == "default" %}  
   <!-- Image only on default pages -->
@@ -15,9 +15,9 @@
     <ul class="nav nav-list">
 
       {% for p in site.posts limit: 10%}
-        <li><a href="">{{p.title}}</a><span style="font-size:50%;">{{ p.date | date: "%B %d") }}</span>
+        <li><a href="{{p.url}}">{{p.title}}</a><span style="font-size:50%;">{{ p.date | date: "%B %d") }}</span>
         </li>
       {% endfor %}
     </ul>
   </div>
-</div>
+  <!-- ></div> -->

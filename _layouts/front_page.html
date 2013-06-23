@@ -67,8 +67,14 @@
 </section>
 
 <section id = "blog" style="background: url('/images/20100130-cc-logo2.png') no-repeat right;">
-  {% include recent-post-list.html %}
-  {{content}}
+  <div class="row">
+    <div class="span8">
+      {{content}}
+    </div>
+    <div class="span3  pull-right">
+      {% include recent-post-list.html %}
+    </div>
+  </div>
 </section>
 
 <br><br><br><br>

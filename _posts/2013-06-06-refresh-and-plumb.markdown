@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Matt Jadud
-title: Website Refresh, Plumb
+title: "Website Refresh, Plumb"
 ---
 
 First, the website picked up a big refresh today. That's a win. It will take time to make sure everything is ticking over nicely, but I'm looking forward to the process; we were still learning Jekyll with the last rev, and it's a bit more straight-forward now.
