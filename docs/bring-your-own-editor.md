@@ -14,14 +14,11 @@ You don't have to use our IDE. You can use vi (which has some very good occam su
 
 * [PlumbBYOE for Mac (ver. 130622)][mac-plumbbyoe]
 * [PlumbBYOE for Windows (ver. 130622)][windows-plumbbyoe]
-
-{% comment %}
-* [PlumbBYOE for Linux (ver. 130622)][linux-plumbbyoe]
-{% endcomment %}
+* [PlumbBYOE for Linux (ver. 130623)][linux-plumbbyoe]
 
 [mac-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130622.dmg
 [windows-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBOYE-20130622.zip
-[linux-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130622.tar.gz
+[linux-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130623.tar.gz
 
 
 
