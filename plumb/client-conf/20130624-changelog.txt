@@ -1,0 +1,3 @@
+0624: Fixed word wrap. Probably still need to fix scrolling. We'll find out.
+
+0623: Matt conducted an experiment, and didn't undo his damage. Next steps: introduce automated testing as part of the build process. It is highly recommended you upgrade, as things probably don't work right now.
