@@ -12,12 +12,12 @@ You don't have to use our IDE. You can use vi (which has some very good occam su
 </p>
 
 
-* [PlumbBYOE for Mac (ver. 130624)][mac-plumbbyoe]
-* [PlumbBYOE for Windows (ver. 130624)][windows-plumbbyoe]
+* [PlumbBYOE for Mac (ver. 130628)][mac-plumbbyoe]
+* [PlumbBYOE for Windows (ver. 130628)][windows-plumbbyoe]
 * [PlumbBYOE for Linux (ver. 130624)][linux-plumbbyoe]
 
-[mac-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130624.dmg
-[windows-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBOYE-20130624.zip
+[mac-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130628.dmg
+[windows-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBOYE-20130628.zip
 [linux-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130624.tar.gz
 
 

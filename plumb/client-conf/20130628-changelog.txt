@@ -1,0 +1,3 @@
+0628: Added the ability to re-upload firmware, addition of Arduino Pro 3.3V at 8MHz. The latter is not thoroughly tested, but TIMERs work correctly, implying that clock issues are correct. (This would be the only difference, so there is high confidence attached to this, but more testing is required.)
+
+0624: Fixed word wrap. Probably still need to fix scrolling. We'll find out.
