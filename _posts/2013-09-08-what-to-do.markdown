@@ -1,0 +1,51 @@
+---
+layout: post
+author: "Matt Jadud"
+title: "What's To Be Done"
+---
+
+At this point, we have one active committer on the occam/Arduino project. Everyone else is, I suspect, busy.
+
+I made a big push at the start of the summer, and summer research with students (and now, the school year) eat my time. Two children also keep me busy.
+
+The question has come in via Twitter: how long until we have support for the Mega?
+
+We had good support for the Mega1280, and used it in an aerial robotics project. As far as I can tell, it should run on the 2560 as well. That said, the bootloader bugs on the 2560 have plagued me for years; patches and requests for fixes have made no difference, and I've given up.
+
+So, there are some steps we can take:
+
+1. We need to combine the TVM and the bytecode in one file, so that every time you write an occam program, the entire VM is re-uploaded along with the new bytecode. This will work around the problems with the bootloader. So, step one is to modify the process by which we build code for the 2560.
+
+1. After that, we need to make sure the occam libraries are working on the 2560. They should, but that will require testing.
+
+That's about it, really.
+
+Currently, things work this way:
+
+1. A web service runs on an Amazon VM. The IDE squirts native code at it, the web service compiles the code, and compiled code for the Arduino comes back.
+
+1. After the round-trip over the 'net, the compiled code for the Arduino is squirted onto the board.
+
+All of this code is open and in a repository.
+
+I've spent some time trying to get the Mega working (this past summer). I don't know what the problem was, but I ran into problems; I was able to execute occam programs, but had a hard time successfully accessing registers and, you know, blinking an LED. (With full debugging enabled, I found that I was able to execute bytecode... but something is wrong with the hardware access.)
+
+So, we're at a point where, frankly, I either need to free up time, or more people need to be willing to hack on things.
+
+1. The VM is currently... unprotected. I really need someone to help set up a VM that is jailed so that the server can run a compiler on arbitrary code without compromising the machine (in the case of malicious intent).
+
+1. The web service is currently written in PLT Racket. It could be written in Python, to make it more accessible to more hackers. I'm fine with this; I didn't do it in the first place because 1) I know Scheme well, and 2) I knew it would Just Work. However, if we want to turn this into a Cherry Py app (or similar), I'm fine with that. But, that's work.
+
+1. The compiler driver is fine, but we need another script that mashes a compiled VM together with the bytecode, padded so the bytecode always starts at the same place in the IHEX file that AVRDUDE uploads to the Arduino. This is easy, and I suspect I've already written it. I don't think it is currently plugged into the server, however.
+
+1. The IDE is fine, mostly, but it needs some cleanup and improvement. It is written in PLT Racket, because it is one of the few languages that I know of that will let me write a GUI application that will **Just Work** on all major operating systems without compromise. I'd consider moving to an extension for Editra (a pure-Python environment) or Gedit (also scriptable in Python) if people were willing and able to help drive the effort.
+
+In short, there is work to be done, and it is detailed work. I'll get there (maybe)... because I, too, have 2560 boards that I would love to be able to use. That said, I also have ARM boards I'd love to be able to use, and would like to spend time on a Raspberry Pi environment, and perhaps the Parallella, and ... you get the picture. There's more work than I can do on my own, and for the moment, I have a lot of responsibilities just being a professor at a small college with small children. This work, sadly, is not able to occupy my time front-and-center.
+
+That's the story. The answer to "when will the 2560 be supported?" is probably "sometime next summer." That's realistic. Anytime sooner will surprise me as well as you.
+
+
+
+
+
+
