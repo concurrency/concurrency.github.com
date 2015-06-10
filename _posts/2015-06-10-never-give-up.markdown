@@ -25,5 +25,5 @@ For your pleasure, you can visit the [Downloads](/downloads/) section and grab t
 The image below hung for years in my father's machine shop, clearly a photocopy even then. It remains true: never give up.
 
 <center>
-	<img src="/images/never-give-up.jpg">
+	<img src="images/never-give-up.jpg">
 </center>
