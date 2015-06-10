@@ -1,5 +1,5 @@
 # Enable syntax highlighting
-pygments: true
+highlighter: true
 paginate: 5
 
 # Global variables
