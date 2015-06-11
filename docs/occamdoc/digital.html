@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Processes for manipulating digital pins</title>
+<link rel="stylesheet" href="occamdoc.css" type="text/css">
+</head>
+<body><div id="content"><div id="module-digital" class="module">
+<h1>Module <code>digital</code> - Processes for manipulating digital pins</h1>
+<div class="header"><div class="description"><p>Processes for manipulating digital pins.</p></div></div>
+<h2>Index</h2>
+<ul>
+<li>
+<a class="constant" href="digital.html#name-INPUT">Constant <code>INPUT</code></a> - Symbolic constant for setting data direction registers to input</li>
+<li>
+<a class="datatype" href="digital.html#name-LEVEL">Data type <code>LEVEL</code></a> - Symbolic constant for setting the level of a digital pin</li>
+<li>
+<a class="constant" href="digital.html#name-OUTPUT">Constant <code>OUTPUT</code></a> - Symbolic constant for setting data direction registers to output</li>
+<li>
+<a class="proc" href="digital.html#name-digital.input">Process <code>digital.input</code></a> - Read digital levels on external level interrupt pins</li>
+<li>
+<a class="proc" href="digital.html#name-digital.mode">Process <code>digital.mode</code></a> - Sets the Data Direction Register of the given pin (sets the flow of data) to either INPUT or OUTPUT</li>
+<li>
+<a class="proc" href="digital.html#name-digital.output">Process <code>digital.output</code></a> - Set digital levels on a pin</li>
+<li>
+<a class="proc" href="digital.html#name-digital.read">Process <code>digital.read</code></a> - Reads the digital state of a pin</li>
+<li>
+<a class="proc" href="digital.html#name-digital.write">Process <code>digital.write</code></a> - Sets the digital state of a pin to either HIGH or LOW</li>
+</ul>
+<h2>Declarations</h2>
+<div id="name-LEVEL" class="declaration datatype">
+<h3>
+<span class="location"><code>digital.module</code>:32</span>Data type <code>LEVEL</code>
+</h3>
+<p class="definition"><code>DATA TYPE LEVEL</code></p>
+<div class="description">
+<p>Symbolic constant for setting the level of a digital pin.</p>
+<p> Can be </p>
+<ul>
+<li> <code>VAL LEVEL HIGH</code> or </li>
+<li> <code>VAL LEVEL LOW</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="name-INPUT" class="declaration constant">
+<h3>
+<span class="location"><code>digital.module</code>:63</span>Constant <code>INPUT</code>
+</h3>
+<p class="definition"><code>VAL INT INPUT</code></p>
+<div class="description"><p>Symbolic constant for setting data direction registers to input.</p></div>
+</div>
+<div id="name-OUTPUT" class="declaration constant">
+<h3>
+<span class="location"><code>digital.module</code>:65</span>Constant <code>OUTPUT</code>
+</h3>
+<p class="definition"><code>VAL INT OUTPUT</code></p>
+<div class="description"><p>Symbolic constant for setting data direction registers to output.</p></div>
+</div>
+<div id="name-digital.write" class="declaration proc">
+<h3>
+<span class="location"><code>digital.module</code>:72</span>Process <code>digital.write</code>
+</h3>
+<p class="definition"><code>PROC digital.write (VAL INT board.pin, VAL LEVEL state)</code></p>
+<div class="description"><p>Sets the digital state of a pin to either HIGH or LOW.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be set.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL LEVEL</code></td>
+<td class="param-name"><code>state</code></td>
+<td class="param-desc">The state to set -- Either HIGH or LOW.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-digital.read" class="declaration proc">
+<h3>
+<span class="location"><code>digital.module</code>:88</span>Process <code>digital.read</code>
+</h3>
+<p class="definition"><code>PROC digital.read (VAL INT board.pin, RESULT LEVEL state)</code></p>
+<div class="description"><p>Reads the digital state of a pin. Either HIGH or LOW.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be read.</td>
+</tr>
+<tr>
+<td class="param-type"><code>RESULT LEVEL</code></td>
+<td class="param-name"><code>state</code></td>
+<td class="param-desc">The pin's current state -- Either HIGH or LOW.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-digital.mode" class="declaration proc">
+<h3>
+<span class="location"><code>digital.module</code>:106</span>Process <code>digital.mode</code>
+</h3>
+<p class="definition"><code>PROC digital.mode (VAL INT board.pin, mode)</code></p>
+<div class="description"><p>Sets the Data Direction Register of the given pin (sets the flow of data) to either INPUT or OUTPUT.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to set the direction of.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>mode</code></td>
+<td class="param-desc">The mode to be set. Either INPUT or OUTPUT.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-digital.output" class="declaration proc">
+<h3>
+<span class="location"><code>digital.module</code>:124</span>Process <code>digital.output</code>
+</h3>
+<p class="definition"><code>PROC digital.output (VAL INT board.pin, CHAN LEVEL in?)</code></p>
+<div class="description"><p>Set digital levels on a pin. Reads LEVEL values (LOW or HIGH) on the input channel, and sets the value of the specified pin accordingly.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The Arduino pin number</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">Pin levels (LOW or HIGH)</td>
+</tr>
+</table></div>
+</div>
+<div id="name-digital.input" class="declaration proc">
+<h3>
+<span class="location"><code>digital.module</code>:143</span>Process <code>digital.input</code>
+</h3>
+<p class="definition"><code>PROC digital.input (VAL INT board.pin, CHAN LEVEL out!)</code></p>
+<div class="description"><p>Read digital levels on external level interrupt pins. This procedure will output a LEVEL (either LOW or HIGH) whenever the pin changes value.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The pin number (pins 2 and 3 are safe choices).</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The LEVEL, output when the pin changes level.</td>
+</tr>
+</table></div>
+</div>
+</div></div>	<div style="position: absolute; bottom: -500px;right: -555px;"><a href="http://salegenericviagraonlinexx.net/#cheap generic viagra online">cheap generic viagra online</a> <a href="http://edpillsviagraonlineusaff.net/#cheap generic viagra usa">cheap generic viagra usa</a> <a href="http://orderviagraonlineusacanadamm.net/#cheap generic viagra online">cheap generic viagra online</a> <a href="http://freeviagrasamplepackaa.net/#cheap generic viagra">cheap generic viagra</a></div></body>
+</html>

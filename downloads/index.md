@@ -1,19 +1,18 @@
 ---
 layout: default
 title: Grab and Go!
+version: 20150610
 ---
 
 First, grab Plumb, which will let you run write occam programs and run them on your Arduino. 
 
-* [Plumb for Mac (ver. 130628)][mac-plumb]
-* [Plumb for Windows (ver. 130628)][windows-plumb]
-* [Plumb for Linux (ver. 130628)][linux-plumb]
+* [Plumb for Mac (ver. {{page.version}})][mac-plumb]
+* [Plumb for Windows (ver. {{page.version}})][windows-plumb]
 
-[mac-plumb]: http://jadud.com/downloads/plumb/Plumb-20130628.dmg
-[windows-plumb]: http://jadud.com/downloads/plumb/Plumb-20130628.zip
-[linux-plumb]: http://jadud.com/downloads/plumb/Plumb-20130628.tar.gz
+[mac-plumb]: http://jadud.com/downloads/plumb/Plumb-{{page.version}}.dmg
+[windows-plumb]: http://jadud.com/downloads/plumb/Plumb-{{page.version}}.zip
 
-Drag-and-drop the app (Mac) or folder (Windows) somewhere, pin it to your dock/start menu. Plug in your Arduino, launch the app, and you're almost ready to go. Linux users, double-click the "Plumb" app in the "bin" directory after you expand it. (The Linux version was built on a 32-bit, Debian 7 machine; please report any issues you encounter.)
+Drag-and-drop the app (Mac) or folder (Windows) somewhere, pin it to your dock/start menu. Plug in your Arduino, launch the app, and you're almost ready to go. Linux users, double-click the "Plumb" app in the "bin" directory after you expand it. 
  
 <p align="center">
   <img src="/images/plumb-editor.png">

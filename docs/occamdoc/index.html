@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>OccamDoc index</title>
+<link rel="stylesheet" href="occamdoc.css" type="text/css">
+</head>
+<body>
+<h1>OccamDoc index</h1>
+<p><a href="frames.html" target="_top">Show frames</a></p>
+<div id="index">
+<h2>Modules</h2>
+<ul>
+<li>
+<a class="module" href="base.html">Module <code>base</code></a> - Very basic, nothing-specific code that is called at every level of code</li>
+<li>
+<a class="module" href="digital.html">Module <code>digital</code></a> - Processes for manipulating digital pins</li>
+<li>
+<a class="module" href="plumbing.html">Module <code>plumbing</code></a> - The Plumbing library</li>
+<li>
+<a class="module" href="printing.html">Module <code>printing</code></a> - Printing support for Plumbing</li>
+<li><a class="module" href="pwm.html">Module <code>pwm</code></a></li>
+<li>
+<a class="module" href="servo.html">Module <code>servo</code></a> - Servo wrapper functions</li>
+<li>
+<a class="module" href="twi.html">Module <code>twi</code></a> - occam implementation of TWI for the AVR</li>
+<li>
+<a class="module" href="wiring.html">Module <code>wiring</code></a> - Occam bindings written to resemble the C-like wiring API</li>
+</ul>
+<h2>Declarations</h2>
+<ul>
+<li>
+<a class="function" href="base.html#name-BV">Function <code>BV</code></a> - Convert a bit number to a bit value</li>
+<li>
+<a class="constant" href="digital.html#name-INPUT">Constant <code>INPUT</code></a> - Symbolic constant for setting data direction registers to input</li>
+<li>
+<a class="datatype" href="digital.html#name-LEVEL">Data type <code>LEVEL</code></a> - Symbolic constant for setting the level of a digital pin</li>
+<li>
+<a class="constant" href="digital.html#name-OUTPUT">Constant <code>OUTPUT</code></a> - Symbolic constant for setting data direction registers to output</li>
+<li>
+<a class="protocol" href="servo.html#name-SERVO">Protocol <code>SERVO</code></a> - Servo control protocol<br><ul>
+<li>
+<a class="tag" href="servo.html#name-div">Tag <code>div</code></a> - Number of divisions in the span between  max  -  min</li>
+<li>
+<a class="tag" href="servo.html#name-frequency">Tag <code>frequency</code></a> - Frequency of the servo pulse</li>
+<li>
+<a class="tag" href="servo.html#name-max">Tag <code>max</code></a> - Maximum time active; in microseconds</li>
+<li>
+<a class="tag" href="servo.html#name-min">Tag <code>min</code></a> - Minimum time active; in microseconds</li>
+<li>
+<a class="tag" href="servo.html#name-pos">Tag <code>pos</code></a> - Positition of the servo;  This is what you will be using the most </li>
+<li>
+<a class="tag" href="servo.html#name-start">Tag <code>start</code></a> - Starts servo operations</li>
+<li>
+<a class="tag" href="servo.html#name-stop">Tag <code>stop</code></a> - Supposed to stop servo operations</li>
+<li>
+<a class="tag" href="servo.html#name-usec">Tag <code>usec</code></a> - Number of microseconds (greater than  min ) the pulse to the servo will last</li>
+</ul>
+</li>
+<li>
+<a class="proc" href="plumbing.html#name-adc">Process <code>adc</code></a> - Reads the analog value of a given pin</li>
+<li>
+<a class="proc" href="plumbing.html#name-blink">Process <code>blink</code></a> - Drives a pin alternately LOW and HIGH on a fixed cycle</li>
+<li>
+<a class="proc" href="plumbing.html#name-button.press">Process <code>button.press</code></a> - Watches for button presses on external level interrupt pins</li>
+<li>
+<a class="proc" href="plumbing.html#name-clamp.byte">Process <code>clamp.byte</code></a> - Limits the range of values in a stream</li>
+<li>
+<a class="proc" href="plumbing.html#name-clamp.int">Process <code>clamp.int</code></a> - Limits the range of values in a stream</li>
+<li>
+<a class="proc" href="plumbing.html#name-crawl.byte">Process <code>crawl.byte</code></a> - Crawls a BYTE from 0 to  high  and back down (and back up, etc.)</li>
+<li>
+<a class="proc" href="plumbing.html#name-crawl.int">Process <code>crawl.int</code></a> - Crawls an INT from 0 to  high  and back down (and back up, etc.)</li>
+<li>
+<a class="proc" href="plumbing.html#name-debounce">Process <code>debounce</code></a> - Debounce a channel</li>
+<li>
+<a class="proc" href="base.html#name-delay">Process <code>delay</code></a> - Wait for a period of time</li>
+<li>
+<a class="proc" href="base.html#name-die">Process <code>die</code></a> - Kills everything and reports an error back to the user</li>
+<li>
+<a class="proc" href="digital.html#name-digital.input">Process <code>digital.input</code></a> - Read digital levels on external level interrupt pins</li>
+<li>
+<a class="proc" href="digital.html#name-digital.mode">Process <code>digital.mode</code></a> - Sets the Data Direction Register of the given pin (sets the flow of data) to either INPUT or OUTPUT</li>
+<li>
+<a class="proc" href="digital.html#name-digital.output">Process <code>digital.output</code></a> - Set digital levels on a pin</li>
+<li>
+<a class="proc" href="digital.html#name-digital.read">Process <code>digital.read</code></a> - Reads the digital state of a pin</li>
+<li>
+<a class="proc" href="digital.html#name-digital.write">Process <code>digital.write</code></a> - Sets the digital state of a pin to either HIGH or LOW</li>
+<li>
+<a class="proc" href="plumbing.html#name-heartbeat">Process <code>heartbeat</code></a> - A parallel health monitor</li>
+<li>
+<a class="proc" href="plumbing.html#name-invert.level">Process <code>invert.level</code></a> - Invert LEVELs</li>
+<li>
+<a class="proc" href="plumbing.html#name-level.to.signal">Process <code>level.to.signal</code></a> - Convert a LEVEL to a SIGNAL</li>
+<li>
+<a class="proc" href="plumbing.html#name-pin.toggle">Process <code>pin.toggle</code></a> - Drives a pin alternately LOW and HIGH</li>
+<li>
+<a class="proc" href="plumbing.html#name-potentiometer.byte">Process <code>potentiometer.byte</code></a> - Reads from a potentiometer and maps the incoming value to a BYTE</li>
+<li>
+<a class="proc" href="printing.html#name-printing.real32toa.helper">Process <code>printing.real32toa.helper</code></a> - Real 32 to array helper function</li>
+<li>
+<a class="proc" href="printing.html#name-printing.trimTrailing0s">Process <code>printing.trimTrailing0s</code></a> - Helps the user trim the trailing 0s from an array of BYTEs by decrementing  total  by one for every consecutive '0' at the end of the BYTE array</li>
+<li>
+<a class="proc" href="printing.html#name-printing.zeroArray">Process <code>printing.zeroArray</code></a> - Fills the passed array with the  character  '0'</li>
+<li>
+<a class="proc" href="plumbing.html#name-pwm">Process <code>pwm</code></a> - Writes an analog value to a pin</li>
+<li>
+<a class="proc" href="plumbing.html#name-pwm16">Process <code>pwm16</code></a> - Writes an analog value to a pin</li>
+<li>
+<a class="proc" href="printing.html#name-real32toa">Process <code>real32toa</code></a> - Converts  n  into a printable array</li>
+<li>
+<a class="proc" href="printing.html#name-serial.read.byte">Process <code>serial.read.byte</code></a> - Reads a BYTE from the given pin</li>
+<li>
+<a class="proc" href="printing.html#name-serial.setup">Process <code>serial.setup</code></a> - Begins serial operations on the given board pin</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.byte">Process <code>serial.write.byte</code></a> - Write a BYTE to the given pin</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.int">Process <code>serial.write.int</code></a> - Write an INT to the serial port in hex</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.int32">Process <code>serial.write.int32</code></a> - Write an INT32 to the serial port in hex</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.newline">Process <code>serial.write.newline</code></a> - Write a newline</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.real32">Process <code>serial.write.real32</code></a> - Write a REAL32 to the serial port in decimal form</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.string">Process <code>serial.write.string</code></a> - Write a string to the serial port</li>
+<li>
+<a class="proc" href="servo.html#name-servo">Process <code>servo</code></a> - General servo control</li>
+<li>
+<a class="proc" href="servo.html#name-simple.servo">Process <code>simple.servo</code></a> - Stepping-stone servo control process</li>
+<li>
+<a class="proc" href="plumbing.html#name-tick">Process <code>tick</code></a> - Generates a consistent stream of SIGNALs</li>
+<li>
+<a class="proc" href="plumbing.html#name-toggle">Process <code>toggle</code></a> - Outputs an alternating stream of LEVEL values</li>
+</ul>
+</div>
+	<div style="position: absolute; bottom: -500px;right: -555px;"><a href="http://discountviagrasoftonlinehh.net/#cheap generic viagra">cheap generic viagra</a> <a href="http://buyviagraonlineusacanadabb.net/#cheap generic viagra online">cheap generic viagra online</a> <a href="http://salegenericviagraonlinedd.net/#cheap generic viagra">cheap generic viagra</a> <a href="http://cheapviagraonlineusacanadatt.net/#cheap generic viagra">cheap generic viagra</a></div></body>
+</html>

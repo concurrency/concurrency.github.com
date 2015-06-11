@@ -1,6 +1,7 @@
 ---
 title: Plumb BYOE
 layout: default
+version: 20150610
 ---
 
 
@@ -12,13 +13,11 @@ You don't have to use our IDE. You can use vi (which has some very good occam su
 </p>
 
 
-* [PlumbBYOE for Mac (ver. 130628)][mac-plumbbyoe]
-* [PlumbBYOE for Windows (ver. 130628)][windows-plumbbyoe]
-* [PlumbBYOE for Linux (ver. 130624)][linux-plumbbyoe]
+* [PlumbBYOE for Mac (ver. {{page.version}})][mac-plumbbyoe]
+* [PlumbBYOE for Windows (ver. {{page.version}})][windows-plumbbyoe]
 
-[mac-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130628.dmg
-[windows-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBOYE-20130628.zip
-[linux-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-20130624.tar.gz
+[mac-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBYOE-{{page.version}}.dmg
+[windows-plumbbyoe]: http://jadud.com/downloads/plumb/PlumbBOYE-{{page.version}}.zip
 
 
 

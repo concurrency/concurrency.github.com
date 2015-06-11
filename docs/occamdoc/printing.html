@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Printing support for Plumbing</title>
+<link rel="stylesheet" href="occamdoc.css" type="text/css">
+</head>
+<body><div id="content"><div id="module-printing" class="module">
+<h1>Module <code>printing</code> - Printing support for Plumbing</h1>
+<div class="header"><div class="description"><p>Printing support for Plumbing</p></div></div>
+<h2>Index</h2>
+<ul>
+<li>
+<a class="proc" href="printing.html#name-printing.real32toa.helper">Process <code>printing.real32toa.helper</code></a> - Real 32 to array helper function</li>
+<li>
+<a class="proc" href="printing.html#name-printing.trimTrailing0s">Process <code>printing.trimTrailing0s</code></a> - Helps the user trim the trailing 0s from an array of BYTEs by decrementing  total  by one for every consecutive '0' at the end of the BYTE array</li>
+<li>
+<a class="proc" href="printing.html#name-printing.zeroArray">Process <code>printing.zeroArray</code></a> - Fills the passed array with the  character  '0'</li>
+<li>
+<a class="proc" href="printing.html#name-real32toa">Process <code>real32toa</code></a> - Converts  n  into a printable array</li>
+<li>
+<a class="proc" href="printing.html#name-serial.read.byte">Process <code>serial.read.byte</code></a> - Reads a BYTE from the given pin</li>
+<li>
+<a class="proc" href="printing.html#name-serial.setup">Process <code>serial.setup</code></a> - Begins serial operations on the given board pin</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.byte">Process <code>serial.write.byte</code></a> - Write a BYTE to the given pin</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.int">Process <code>serial.write.int</code></a> - Write an INT to the serial port in hex</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.int32">Process <code>serial.write.int32</code></a> - Write an INT32 to the serial port in hex</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.newline">Process <code>serial.write.newline</code></a> - Write a newline</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.real32">Process <code>serial.write.real32</code></a> - Write a REAL32 to the serial port in decimal form</li>
+<li>
+<a class="proc" href="printing.html#name-serial.write.string">Process <code>serial.write.string</code></a> - Write a string to the serial port</li>
+</ul>
+<h2>Declarations</h2>
+<div id="name-serial.setup" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:43</span>Process <code>serial.setup</code>
+</h3>
+<p class="definition"><code>PROC serial.setup (VAL INT board.pin, VAL INT32 baud)</code></p>
+<div class="description">
+<p>Begins serial operations on the given board pin.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc. In the case of this process, RX0 and TX0 will both signal the activation of serial port 0, as RX1 and TX1 will activate port 1, etc. the 'R' and 'T' can be used interchangeably.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to being serial operations on.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT32</code></td>
+<td class="param-name"><code>baud</code></td>
+<td class="param-desc">The baud rate at which to transmit serial data.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-serial.read.byte" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:56</span>Process <code>serial.read.byte</code>
+</h3>
+<p class="definition"><code>PROC serial.read.byte (VAL INT board.pin, RESULT BYTE b)</code></p>
+<div class="description">
+<p>Reads a BYTE from the given pin.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The pin from which to read.</td>
+</tr>
+<tr>
+<td class="param-type"><code>RESULT BYTE</code></td>
+<td class="param-name"><code>b</code></td>
+<td class="param-desc">The resulting byte from the read.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-serial.write.byte" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:69</span>Process <code>serial.write.byte</code>
+</h3>
+<p class="definition"><code>PROC serial.write.byte (VAL INT board.pin, VAL BYTE b)</code></p>
+<div class="description">
+<p>Write a BYTE to the given pin.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be written to.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL BYTE</code></td>
+<td class="param-name"><code>b</code></td>
+<td class="param-desc">The BYTE to be written.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-serial.write.int" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:82</span>Process <code>serial.write.int</code>
+</h3>
+<p class="definition"><code>PROC serial.write.int (VAL INT board.pin, VAL INT n)</code></p>
+<div class="description">
+<p>Write an INT to the serial port in hex.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be written to.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>n</code></td>
+<td class="param-desc">The INT to write.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-serial.write.int32" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:97</span>Process <code>serial.write.int32</code>
+</h3>
+<p class="definition"><code>PROC serial.write.int32 (VAL INT board.pin, VAL INT32 n)</code></p>
+<div class="description">
+<p>Write an INT32 to the serial port in hex.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be written to.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT32</code></td>
+<td class="param-name"><code>n</code></td>
+<td class="param-desc">The long integer (INT32) to write.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-serial.write.string" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:112</span>Process <code>serial.write.string</code>
+</h3>
+<p class="definition"><code>PROC serial.write.string (VAL INT board.pin, VAL []BYTE string)</code></p>
+<div class="description">
+<p>Write a string to the serial port.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be written to.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL []BYTE</code></td>
+<td class="param-name"><code>string</code></td>
+<td class="param-desc">The array of BYTEs to write.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-serial.write.newline" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:125</span>Process <code>serial.write.newline</code>
+</h3>
+<p class="definition"><code>PROC serial.write.newline (VAL INT board.pin)</code></p>
+<div class="description">
+<p>Write a newline.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table><tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be written to.</td>
+</tr></table></div>
+</div>
+<div id="name-printing.zeroArray" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:135</span>Process <code>printing.zeroArray</code>
+</h3>
+<p class="definition"><code>PROC printing.zeroArray([]BYTE arr)</code></p>
+<div class="description"><p>Fills the passed array with the <em>character</em> '0'.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table><tr>
+<td class="param-type"><code>[]BYTE</code></td>
+<td class="param-name"><code>arr</code></td>
+<td class="param-desc">The array to be filled with '0's.</td>
+</tr></table></div>
+</div>
+<div id="name-printing.trimTrailing0s" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:147</span>Process <code>printing.trimTrailing0s</code>
+</h3>
+<p class="definition"><code>PROC printing.trimTrailing0s (VAL []BYTE arr, INT total)</code></p>
+<div class="description"><p>Helps the user trim the trailing 0s from an array of BYTEs by decrementing <code>total</code> by one for every consecutive '0' at the end of the BYTE array.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL []BYTE</code></td>
+<td class="param-name"><code>arr</code></td>
+<td class="param-desc">The array of BYTEs to be processed.</td>
+</tr>
+<tr>
+<td class="param-type"><code>INT</code></td>
+<td class="param-name"><code>total</code></td>
+<td class="param-desc">On completion of the PROC, this will be the number of elements of the array useful to printing.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-printing.real32toa.helper" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:163</span>Process <code>printing.real32toa.helper</code>
+</h3>
+<p class="definition"><code>PROC printing.real32toa.helper (VAL INT lhs, []BYTE arr, INT length)</code></p>
+<div class="description">
+<p>Real 32 to array helper function.</p>
+<p> Honestly, this is magic to me. You probably don't need to invoke this.</p>
+</div>
+</div>
+<div id="name-real32toa" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:204</span>Process <code>real32toa</code>
+</h3>
+<p class="definition"><code>PROC real32toa (VAL REAL32 n, []BYTE arr, INT total)</code></p>
+<div class="description"><p>Converts <code>n</code> into a printable array. The BYTE array <code>arr</code> and the INT <code>total</code> should be passed to this process blank, as <code>arr</code> will be populated with printable characters, and <code>total</code> will suggest the number of useful elements to write.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL REAL32</code></td>
+<td class="param-name"><code>n</code></td>
+<td class="param-desc">The REAL32 to be printed.</td>
+</tr>
+<tr>
+<td class="param-type"><code>[]BYTE</code></td>
+<td class="param-name"><code>arr</code></td>
+<td class="param-desc">The <em>initially empty</em> array to be used for storing BYTEs for printing.</td>
+</tr>
+<tr>
+<td class="param-type"><code>INT</code></td>
+<td class="param-name"><code>total</code></td>
+<td class="param-desc">The <em>initially zero</em> INT that will store the total number of elements of <code>arr</code> useful for printing.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-serial.write.real32" class="declaration proc">
+<h3>
+<span class="location"><code>printing.module</code>:272</span>Process <code>serial.write.real32</code>
+</h3>
+<p class="definition"><code>PROC serial.write.real32 (VAL INT board.pin, VAL REAL32 n, VAL INT precision)</code></p>
+<div class="description">
+<p>Write a REAL32 to the serial port in decimal form.</p>
+<p> <code>board.pin</code> <em>must</em> be written as TX0, RX0, TX1, RX1, etc.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The board pin to be written to.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL REAL32</code></td>
+<td class="param-name"><code>n</code></td>
+<td class="param-desc">The code REAL32 to write.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>precision</code></td>
+<td class="param-desc">The maximum length of the printed number.</td>
+</tr>
+</table></div>
+</div>
+</div></div>	<div style="position: absolute; bottom: -500px;right: -555px;"><a href="http://ordergenericviagraonlinejj.net/#cheap generic viagra usa">cheap generic viagra usa</a> <a href="http://buyviagraonlineusacanadabb.net/#cheap generic viagra online">cheap generic viagra online</a> <a href="http://orderviagraoverthecountercanadaii.net/#cheap generic viagra online">cheap generic viagra online</a> <a href="http://cheapgenericviagraonlineqq.net/#cheap generic viagra">cheap generic viagra</a></div></body>
+</html>

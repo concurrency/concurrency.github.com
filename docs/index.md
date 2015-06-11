@@ -14,7 +14,13 @@ We're using occam-pi because the language is:
 
 ## Plumbing for the Arduino
 
-We wrote [Plumbing for the Arduino](/pdf/plumbing-for-the-arduino.pdf) to help get you started. It is, admittedly, in need of expansion.
+We wrote [Plumbing for the Arduino](/pdf/plumbing-for-the-arduino.pdf) to help get you started. It is, admittedly, in need of expansion. However, it is a good start if you're new to occam and want to work with the Arduino. 
+
+UPDATE 20150610: And, it reflects a completely different IDE. Plumb makes some things much easier... so, it needs updating for several reasons.
+
+## Resources: occamdoc
+
+If you want to use the Plumbing libraries on the Arduino, [you may find this documentation to be useful](occamdoc/). We call it "occamdoc," and it is directly generated from the code for the library itself.
 
 ## Resources: Books
 
@@ -22,14 +28,12 @@ In some ways, there are a wealth of resources for you to use. In other ways, you
 
 There are a number of books. These are out of print, and scans of them are made available to you here:
 
-* [A Tutorial Introduction to Concurrent Programming in Occam](http://rockalypse.org/courses/cs220f11/resources/occam-books/pountain.pdf) by [Dick Pountain](http://www.dickpountain.co.uk/) and [David May](http://en.wikipedia.org/wiki/David_May_(computer_scientist)).
-* [Programming in occam2](http://rockalypse.org/courses/cs220f11/resources/occam-books/burns.pdf) by Alan Burns.
-* [Introduction to the Programming Language Occam](http://rockalypse.org/courses/cs220f11/resources/occam-books/hyde.pdf) by Daniel Hyde.
-* [An Introduction to occam2 Programming](http://rockalypse.org/courses/cs220f11/resources/occam-books/bowler.pdf) by Bowler, Kenway, Pawley, and Roweth.
-* [Introduction to occam2 on the Transputer](http://rockalypse.org/courses/cs220f11/resources/occam-books/brookes.pdf) by Brookes and Stewart.
+* [A Tutorial Introduction to Concurrent Programming in Occam](books/pountain.pdf) by [Dick Pountain](http://www.dickpountain.co.uk/) and [David May](http://en.wikipedia.org/wiki/David_May_(computer_scientist)).
+* [Programming in occam2](books/burns.pdf) by Alan Burns.
+* [Introduction to the Programming Language Occam](books/hyde.pdf) by Daniel Hyde.
+* [An Introduction to occam2 Programming](books/bowler.pdf) by Bowler, Kenway, Pawley, and Roweth.
+* [Introduction to occam2 on the Transputer](books/brookes.pdf) by Brookes and Stewart.
 
-
-This last link (Plumbing for the Arduino) will help introduce you to programming in occam on the Arduino, but it won't take you very far.
 
 It is important to note two things as you use these resources. First, occam-pi is a *superset* of occam2. Therefore, most anything you read about occam2 will be true for occam-pi. Also, if you are working with an Arduino, then you are (for all intents and purposes) working with the occam2 subset of the language. In other words, the above books can be viewed as guides to the language we use on embedded platforms like the Arduino.
 

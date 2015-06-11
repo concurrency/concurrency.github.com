@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>The Plumbing library</title>
+<link rel="stylesheet" href="occamdoc.css" type="text/css">
+</head>
+<body><div id="content"><div id="module-plumbing" class="module">
+<h1>Module <code>plumbing</code> - The Plumbing library</h1>
+<div class="header"><div class="description">
+<p>The Plumbing library.</p>
+<p> <code>PROC</code>s in this module generally have arguments in this order:</p>
+<ul>
+<li> non-channels; </li>
+<li> input channels; </li>
+<li> output channels.</li>
+</ul>
+</div></div>
+<h2>Index</h2>
+<ul>
+<li>
+<a class="proc" href="plumbing.html#name-adc">Process <code>adc</code></a> - Reads the analog value of a given pin</li>
+<li>
+<a class="proc" href="plumbing.html#name-blink">Process <code>blink</code></a> - Drives a pin alternately LOW and HIGH on a fixed cycle</li>
+<li>
+<a class="proc" href="plumbing.html#name-button.press">Process <code>button.press</code></a> - Watches for button presses on external level interrupt pins</li>
+<li>
+<a class="proc" href="plumbing.html#name-clamp.byte">Process <code>clamp.byte</code></a> - Limits the range of values in a stream</li>
+<li>
+<a class="proc" href="plumbing.html#name-clamp.int">Process <code>clamp.int</code></a> - Limits the range of values in a stream</li>
+<li>
+<a class="proc" href="plumbing.html#name-crawl.byte">Process <code>crawl.byte</code></a> - Crawls a BYTE from 0 to  high  and back down (and back up, etc.)</li>
+<li>
+<a class="proc" href="plumbing.html#name-crawl.int">Process <code>crawl.int</code></a> - Crawls an INT from 0 to  high  and back down (and back up, etc.)</li>
+<li>
+<a class="proc" href="plumbing.html#name-debounce">Process <code>debounce</code></a> - Debounce a channel</li>
+<li>
+<a class="proc" href="plumbing.html#name-heartbeat">Process <code>heartbeat</code></a> - A parallel health monitor</li>
+<li>
+<a class="proc" href="plumbing.html#name-invert.level">Process <code>invert.level</code></a> - Invert LEVELs</li>
+<li>
+<a class="proc" href="plumbing.html#name-level.to.signal">Process <code>level.to.signal</code></a> - Convert a LEVEL to a SIGNAL</li>
+<li>
+<a class="proc" href="plumbing.html#name-pin.toggle">Process <code>pin.toggle</code></a> - Drives a pin alternately LOW and HIGH</li>
+<li>
+<a class="proc" href="plumbing.html#name-potentiometer.byte">Process <code>potentiometer.byte</code></a> - Reads from a potentiometer and maps the incoming value to a BYTE</li>
+<li>
+<a class="proc" href="plumbing.html#name-pwm">Process <code>pwm</code></a> - Writes an analog value to a pin</li>
+<li>
+<a class="proc" href="plumbing.html#name-pwm16">Process <code>pwm16</code></a> - Writes an analog value to a pin</li>
+<li>
+<a class="proc" href="plumbing.html#name-tick">Process <code>tick</code></a> - Generates a consistent stream of SIGNALs</li>
+<li>
+<a class="proc" href="plumbing.html#name-toggle">Process <code>toggle</code></a> - Outputs an alternating stream of LEVEL values</li>
+</ul>
+<h2>Declarations</h2>
+<div id="name-debounce" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:65</span>Process <code>debounce</code>
+</h3>
+<p class="definition"><code>PROC debounce (CHAN LEVEL in?, out!)</code></p>
+<div class="description"><p>Debounce a channel. Debounces a channel of LEVELs. Specifically, if multiple values come in within the DEBOUNCE.TIME (currently 50ms), only the first value is passed through.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">The incoming LEVEL values</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The outgoing LEVEL values, debounced</td>
+</tr>
+</table></div>
+</div>
+<div id="name-level.to.signal" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:94</span>Process <code>level.to.signal</code>
+</h3>
+<p class="definition"><code>PROC level.to.signal (CHAN LEVEL in?, CHAN SIGNAL out!)</code></p>
+<div class="description"><p>Convert a LEVEL to a SIGNAL. Consumes a stream of LEVEL values, and emits a SIGNAL for each LEVEL received, regardless of whether it is LOW or HIGH.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">Input LEVEL values.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN SIGNAL</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">Output SIGNALs.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-invert.level" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:110</span>Process <code>invert.level</code>
+</h3>
+<p class="definition"><code>PROC invert.level (CHAN LEVEL in?, out!)</code></p>
+<div class="description"><p>Invert LEVELs. Reads in LEVEL values, and outputs the opposite. Upon receiving a LOW, sends a HIGH, and visa versa.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">Incoming LEVEL values.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">Outgoing LEVEL values, inverted.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-tick" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:125</span>Process <code>tick</code>
+</h3>
+<p class="definition"><code>PROC tick (VAL INT period, CHAN SIGNAL out!)</code></p>
+<div class="description"><p>Generates a consistent stream of SIGNALs. Every <code>period</code> milliseconds, a SIGNAL is generated.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>period</code></td>
+<td class="param-desc">A delay time in milliseconds.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN SIGNAL</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">SIGNALs generated after the given delay.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-toggle" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:142</span>Process <code>toggle</code>
+</h3>
+<p class="definition"><code>PROC toggle (VAL LEVEL initial.level, CHAN SIGNAL in?, CHAN LEVEL out!)</code></p>
+<div class="description"><p>Outputs an alternating stream of LEVEL values. Starting with an initial level (either LOW or HIGH), this process outputs a stream of alternating LEVEL values upon request. On receiving a SIGNAL, the next LEVEL is emitted</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL LEVEL</code></td>
+<td class="param-name"><code>initial.level</code></td>
+<td class="param-desc">Either LOW or HIGH to start.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN SIGNAL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">The request line.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN LEVEL</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The alternating stream of LEVEL values.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-pin.toggle" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:159</span>Process <code>pin.toggle</code>
+</h3>
+<p class="definition"><code>PROC pin.toggle (VAL INT pin, VAL LEVEL initial.level, CHAN SIGNAL in?)</code></p>
+<div class="description"><p>Drives a pin alternately LOW and HIGH. Upon request, alternates the level of a pin from LOW to HIGH.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>pin</code></td>
+<td class="param-desc">The (digital) Arduino pin we want to drive.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL LEVEL</code></td>
+<td class="param-name"><code>initial.level</code></td>
+<td class="param-desc">Either LOW or HIGH.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN SIGNAL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">The request line.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-blink" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:173</span>Process <code>blink</code>
+</h3>
+<p class="definition"><code>PROC blink (VAL INT pin, delay.time)</code></p>
+<div class="description"><p>Drives a pin alternately LOW and HIGH on a fixed cycle. Every <code>delay.time</code> milliseconds, toggles a pin.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>pin</code></td>
+<td class="param-desc">The Arduino pin.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>delay.time</code></td>
+<td class="param-desc">The number of milliseconds between toggles.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-heartbeat" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:198</span>Process <code>heartbeat</code>
+</h3>
+<p class="definition"><code>PROC heartbeat ()</code></p>
+<div class="description"><p>A parallel health monitor.</p></div>
+</div>
+<div id="name-adc" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:223</span>Process <code>adc</code>
+</h3>
+<p class="definition"><code>PROC adc (VAL INT analog.pin, VAL INT ref, CHAN SIGNAL in?, CHAN INT out!)</code></p>
+<div class="description">
+<p>Reads the analog value of a given pin. Upon request, performs an analog to digital conversion, comparing the voltage at <code>analog.pin</code> with the specified reference voltage. No matter which reference is used, the value of <code>out</code> will always rest between 0 and 1023.</p>
+<p> There is a safeguard put in place that should allow <code>analog.pin</code> to be properly read if written as 0, 1, 2, etc., but it is still recommended that one writes A0, A1, etc. to avoid confusion.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>analog.pin</code></td>
+<td class="param-desc">The Analog pin number. (A0, A1, A2)</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>ref</code></td>
+<td class="param-desc">The source of the reference voltage. Either VCC (default), AREF (external), or INTERNAL (1.1v internal reference).</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN SIGNAL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">The request line.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN INT</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The output channel for converted readings. 0 - 1023.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-potentiometer.byte" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:248</span>Process <code>potentiometer.byte</code>
+</h3>
+<p class="definition"><code>PROC potentiometer.byte (VAL INT analog.pin, CHAN SIGNAL in?, CHAN BYTE out!)</code></p>
+<div class="description">
+<p>Reads from a potentiometer and maps the incoming value to a BYTE. Upon request, the incoming value from a potentiometer (a knob, slider...) connected to <code>analog.pin</code> to will be mapped to an appropriate value between 0-255.</p>
+<p> There is a safeguard put in place that should allow <code>analog.pin</code> to be properly read if written as 0, 1, 2, etc., but it is still recommended that one writes A0, A1, etc. to avoid confusion.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>analog.pin</code></td>
+<td class="param-desc">The analog pin the potentiometer is connected to.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN SIGNAL</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">The request line.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN BYTE</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The output chanel for mapped values. 0-255.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-clamp.byte" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:272</span>Process <code>clamp.byte</code>
+</h3>
+<p class="definition"><code>PROC clamp.byte (VAL BYTE low, high, CHAN BYTE in?, out!)</code></p>
+<div class="description"><p>Limits the range of values in a stream. Takes <code>low</code> and <code>high</code> as limits, and any BYTEs read in that are below <code>low</code> are clamped to <code>low</code>, and likewise with the <code>high</code> value.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL BYTE</code></td>
+<td class="param-name"><code>low</code></td>
+<td class="param-desc">The lower limit for valid numbers.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL BYTE</code></td>
+<td class="param-name"><code>high</code></td>
+<td class="param-desc">The upper limit for valid numbers.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN BYTE</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">The input stream of BYTEs.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN BYTE</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The output stream of BYTEs.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-clamp.int" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:296</span>Process <code>clamp.int</code>
+</h3>
+<p class="definition"><code>PROC clamp.int (VAL INT low, high, CHAN INT in?, out!)</code></p>
+<div class="description"><p>Limits the range of values in a stream. Takes <code>low</code> and <code>high</code> as limits, and any INTs read in that are below <code>low</code> are clamped to <code>low</code>, and likewise with the <code>high</code> value.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>low</code></td>
+<td class="param-desc">The lower limit for valid numbers.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>high</code></td>
+<td class="param-desc">The upper limit for valid numbers.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN INT</code></td>
+<td class="param-name"><code>in</code></td>
+<td class="param-desc">The input stream of INTs.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN INT</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The output stream of INTs.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-crawl.byte" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:323</span>Process <code>crawl.byte</code>
+</h3>
+<p class="definition"><code>PROC crawl.byte (VAL BYTE high, step, VAL INT wait, CHAN BYTE out!)</code></p>
+<div class="description"><p>Crawls a BYTE from 0 to <code>high</code> and back down (and back up, etc.). Pausing <code>wait</code> milliseconds between each signal send, and incrementing (in either direction) <code>step</code> between each send, the outgoing value is capped at 0 and <code>high</code>.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL BYTE</code></td>
+<td class="param-name"><code>high</code></td>
+<td class="param-desc">The upper limit of output values.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL BYTE</code></td>
+<td class="param-name"><code>step</code></td>
+<td class="param-desc">The increment between each send.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>wait</code></td>
+<td class="param-desc">The time - in milliseconds - to wait after a successful send before attempting another.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN BYTE</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The output stream of BYTEs.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-crawl.int" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:368</span>Process <code>crawl.int</code>
+</h3>
+<p class="definition"><code>PROC crawl.int (VAL INT high, step, VAL INT wait, CHAN INT out!)</code></p>
+<div class="description"><p>Crawls an INT from 0 to <code>high</code> and back down (and back up, etc.). Pausing <code>wait</code> milliseconds between each signal send, and incrementing (in either direction) <code>step</code> between each send, the outgoing value is capped at 0 and <code>high</code>.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>high</code></td>
+<td class="param-desc">The upper limit of output values.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>step</code></td>
+<td class="param-desc">The increment between each send.</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>wait</code></td>
+<td class="param-desc">The time - in milliseconds - to wait after a successful send before attempting another.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN INT</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">The output stream of INTs.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-pwm" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:412</span>Process <code>pwm</code>
+</h3>
+<p class="definition"><code>PROC pwm (VAL INT board.pin, CHAN BYTE level?)</code></p>
+<div class="description"><p>Writes an analog value to a pin. For a given (PWM) pin, sets the observed analog level to a value between 0 and 255. Negative values are treated as 0, and values greater than 255 are treated as 255.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The pin number.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN BYTE</code></td>
+<td class="param-name"><code>level</code></td>
+<td class="param-desc">The input level channel.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-pwm16" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:435</span>Process <code>pwm16</code>
+</h3>
+<p class="definition"><code>PROC pwm16 (VAL INT board.pin, VAL INT top, CHAN INT level?)</code></p>
+<div class="description">
+<p>Writes an analog value to a pin. For a given (PWM) pin, sets the level to a value between 0 and <code>top</code>. Negative values are treated as 0, and values greater than <code>top</code> are treated as [code top].</p>
+<p> <em>Be careful</em>. Not every PWM pin is connected to a 16 bit timer, so not every pin labeled as a PWM can be used with this PROC.</p>
+</div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The Arduino pin number</td>
+</tr>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>top</code></td>
+<td class="param-desc">The highest level top can be set to.</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN INT</code></td>
+<td class="param-name"><code>level</code></td>
+<td class="param-desc">The input level channel.</td>
+</tr>
+</table></div>
+</div>
+<div id="name-button.press" class="declaration proc">
+<h3>
+<span class="location"><code>plumbing.module</code>:460</span>Process <code>button.press</code>
+</h3>
+<p class="definition"><code>PROC button.press (VAL INT board.pin, CHAN SIGNAL out!)</code></p>
+<div class="description"><p>Watches for button presses on external level interrupt pins. When a button is pressed a SIGNAL is generated. Uses digital.input, debounce, and level.to.signal.</p></div>
+<h4>Parameters:</h4>
+<div class="params"><table>
+<tr>
+<td class="param-type"><code>VAL INT</code></td>
+<td class="param-name"><code>board.pin</code></td>
+<td class="param-desc">The pin the button is connected to (pins 2 and 3 are safe bets).</td>
+</tr>
+<tr>
+<td class="param-type"><code>CHAN SIGNAL</code></td>
+<td class="param-name"><code>out</code></td>
+<td class="param-desc">SIGNALs generated when the button is pressed.</td>
+</tr>
+</table></div>
+</div>
+</div></div>	<div style="position: absolute; bottom: -500px;right: -555px;"><a href="http://viagrasuperforceonlinezz.net/#online viagra without perscription">online viagra without perscription</a> <a href="http://salegenericviagraonliness.net/#cheap generic viagra online">cheap generic viagra online</a> <a href="http://viagraoverthecounterusacanadazz.net/#cheap generic viagra online">cheap generic viagra online</a> <a href="http://viagrasideeffectsusacanadass.net/#cheap generic viagra">cheap generic viagra</a></div></body>
+</html>
